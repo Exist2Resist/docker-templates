@@ -5,7 +5,7 @@
   <Category>Downloaders:</Category>
   <Overview>
     mbentley/teamspeak:latest[br][br]
-	ocker image for TeamSpeak 3 Server based off of debian:jessie[br][br]
+	Docker image for TeamSpeak 3 Server based off of debian:jessie[br][br]
 	Note: This Dockerfile will always install the very latest version of TS3 available.[br][br]
 	To run on unRAID 6...[br]
 	[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[br][br]
