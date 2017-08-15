@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>teamspeak</Name>
   <Beta>False</Beta>
-  <Category>VoIP:</Category>
+  <Category>VoIP:Gaming</Category>
   <Overview>
     mbentley/teamspeak:latest[br][br]
 	Docker image for TeamSpeak 3 Server based off of debian:jessie[br][br]	
