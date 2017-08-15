@@ -4,11 +4,20 @@
   <Beta>False</Beta>
   <Category>Downloaders:</Category>
   <Overview>
-    This is a Docker container for running Murmur, the server for the Mumble voice-over-ip client.
-	A simple mumble-server with ini file, log, and db in your control.
+	Please be aware this is not my container, I only built an unRAID template for this.[br]
+	All credit goes to coppit, if you wish to thank anyone it should be him.[br][br]
+    This is a Docker container for running Murmur, the server for the Mumble voice-over-ip client.[br]
+	A simple mumble-server with ini file, log, and db in your control.[br][br]
 	
-	Unraid Run Example:
-	docker run --name mumble-server -d -- restart=always  --net=bridge -p 64738:64738 -p 64738:64738/udp -v /mnt/disks/DataDisk/data/murmur/:/data -t coppit/mumble-server
+	Unraid manual run Example:[br]
+	docker run --name mumble-server -d -- restart=always  --net=bridge -p 64738:64738 -p 64738:64738/udp -v /mnt/disks/DataDisk/data/murmur/:/data -t coppit/mumble-server[br]
+	
+	[span style=\'color: #E80000;\']Murmur SU password [/span]will be in the log file created in your persistent directory.[br]
+	SSH to your server and vi or nano your mumble-server.log file.[br][br]
+	File permissions and ownership for reference:[br]
+	mumble-server.ini    {chmod 666}{chown root:root} 
+	mumble-server.log    {chmod 660}{chown 108:111}
+	mumble-server.sqlite {chmod 640}{chown 108:111}
   </Overview>
   <Registry>https://hub.docker.com/r/coppit/mumble-server/</Registry>
   <GitHub>https://github.com/coppit/docker-mumble-server</GitHub>
