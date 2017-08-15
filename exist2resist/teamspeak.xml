@@ -18,7 +18,7 @@
   </Overview>
   <Registry>https://hub.docker.com/r/mbentley/teamspeak/</Registry>
   <GitHub>https://github.com/mbentley/docker-teamspeak</GitHub>
-  <Repository>mbentley/docker-teamspeak</Repository>
+  <Repository>mbentley/teamspeak</Repository>
   <Support>n/a</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
