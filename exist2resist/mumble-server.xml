@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>mumble-server</Name>
+  <Beta>False</Beta>
+  <Category>Downloaders:</Category>
+  <Overview>
+    This is a Docker container for running Murmur, the server for the Mumble voice-over-ip client.
+	A simple mumble-server with ini file, log, and db in your control.
+	
+	Unraid Run Example:
+	docker run --name mumble-server -d -- restart=always  --net=bridge -p 64738:64738 -p 64738:64738/udp -v /mnt/disks/DataDisk/data/murmur/:/data -t coppit/mumble-server
+  </Overview>
+  <Registry>https://hub.docker.com/r/coppit/mumble-server/</Registry>
+  <GitHub>https://github.com/coppit/docker-mumble-server</GitHub>
+  <Repository>coppit/mumble-server</Repository>
+  <Support>n/a</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <WebUI></WebUI>
+  <Icon>http://i.imgur.com/YzODbpW.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Config Type="Path" Name="Config directory" Target="/data" Default="/mnt/user/appdata/murmur" Mode="rw" Description="Host path to store Murmur database, ini and, log files." Display="always" Required="true"></Config>
+  <Config Type="Port" Name="TCP Port" Target="64738" Default="64738" Mode="tcp" Description="" Display="always" Required="true">64738</Config>
+  <Config Type="Port" Name="UDP Port" Target="64738" Default="64738" Mode="udp" Description="" Display="always" Required="true">64738</Config>
+</Container>
