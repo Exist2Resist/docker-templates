@@ -2,19 +2,19 @@
 <Container version="2">
   <Name>teamspeak</Name>
   <Beta>False</Beta>
-  <Category>Downloaders:</Category>
+  <Category>VoIP:Gaming</Category>
   <Overview>
     mbentley/teamspeak:latest[br][br]
-	Docker image for TeamSpeak 3 Server based off of debian:jessie[br][br]
+	Docker image for TeamSpeak 3 Server based off of debian:jessie[br][br]	
+	All Credit goes to Matt Bentley for the docker, I only put together the unRAID docker template.[br][br]
 	Note: This Dockerfile will always install the very latest version of TS3 available.[br][br]
-	To run on unRAID 6...[br]
 	[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[br][br]
 	create a /mnt/user/appdata directory.[br]
 	chown -R 503:503.[/span][br][br]	
-	In order to get the credentials for your TS server, check the container logs as it will output the serveradmin password and your ServerAdmin privilege key.[br][br]
 	For additional parameters, check the (6) Commandline Parameters section of the TeamSpeak 3 Server Quickstart Guide. Either add the parameters to ts3server.ini or specify them after the Docker image name.[br][br]
 	unRAID Example:[br]
-	docker run -d --restart=always --net=bridge --name teamspeak -p 9987:9987/udp -p 30033:30033 -p 10011:10011  -p 41144:41144 -v /mnt/disks/DataDisk/data/TS3:/data -e PGID=99 -e PUID=99 mbentley/teamspeak [br]
+	docker run -d --restart=always --net=bridge --name teamspeak -p 9987:9987/udp -p 30033:30033 -p 10011:10011  -p 41144:41144 -v /mnt/disks/DataDisk/data/TS3:/data -e PGID=99 -e PUID=99 mbentley/teamspeak [br][br]
+	[span style=\'color: #5AD031;\']In order to get the credentials for your TS server, check the container logs as it will output the serveradmin password and your ServerAdmin privilege key.[/span][br]
   </Overview>
   <Registry>https://hub.docker.com/r/mbentley/teamspeak/</Registry>
   <GitHub>https://github.com/mbentley/docker-teamspeak</GitHub>
