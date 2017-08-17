@@ -30,7 +30,7 @@
   <Support>n/a</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Network>host</Network>
+  <Network>bridge</Network>
   <WebUI></WebUI>
   <Icon>http://i.imgur.com/nOIZcJ1.png?1</Icon>
   <ExtraParams></ExtraParams>
