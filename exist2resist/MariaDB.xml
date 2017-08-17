@@ -8,7 +8,6 @@
 	Docker image for MariaDB[br][br]
 	[span style=\'color: #00FF23;\']
 	Add a :label tag to the Repository field[br]
-	To do this switch to Advanced View with the toggle on the top right of this page[br]
 	Label options:[br]
 	10.3.0, 10.3 [br]
 	10.2.7, 10.2, 10, latest [br]
@@ -31,15 +30,13 @@
   <Support>n/a</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Network>bridge</Network>
+  <Network>host</Network>
   <WebUI></WebUI>
   <Icon>http://i.imgur.com/nOIZcJ1.png?1</Icon>
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="Config directory" Target="/var/lib/mysql" Mode="rw" Description="Optional: Host path to store MariaDB files. Optional" Display="always" Required="false"></Config>
   <Config Type="Port" Name="TCP Port" Target="3306" Default="3306" Mode="tcp" Description="TCP port 3306" Display="always" Required="false"></Config>
   <Config Type="Variable" Name="SQL root password" Target="MYSQL_ROOT_PASSWORD" Default="" Description="Root password" Display="always" Required="true"></Config>
-  <Config Type="Variable" Name="SQL User name" Target="MYSQL_USER" Description="Optional: User name" Display="always" Required="false"></Config>
-  <Config Type="Variable" Name="SQL User password" Target="MYSQL_PASSWORD" Description="Optional: User password" Display="always" Required="false"></Config> 
-  <Config Type="Variable" Name="Run with user ID" Target="APP_UID" Default="99" Description="Run application with specified user id." Mask="false" Display="advanced" Required="true">99</Config>
-  <Config Type="Variable" Name="Run with group ID" Target="APP_GID" Default="100" Description="Run application with specified group id." Mask="false" Display="advanced" Required="true">99</Config>
+  <Config Type="Variable" Name="SQL User ID" Target="MYSQL_USER" Default="" Description="DB User ID" Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="SQL User Password" Target="MYSQL_PASSWORD" Default="" Description="DB User Password" Display="always" Required="false"></Config>
 </Container>
