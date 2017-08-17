@@ -4,7 +4,7 @@
   <Beta>False</Beta>
   <Category>VoIP:Gaming</Category>
   <Overview>
-    mbentley/teamspeak:latest[br][br]
+    coppit/mumble-server:latest[br][br]
 	Docker image for TeamSpeak 3 Server based off of debian:jessie[br][br]	
 	All Credit goes to Matt Bentley for the docker, I only put together the unRAID docker template.[br][br]
 	Note: This Dockerfile will always install the very latest version of TS3 available.[br][br]
@@ -19,7 +19,7 @@
   </Overview>
   <Registry>https://hub.docker.com/r/mbentley/teamspeak/</Registry>
   <GitHub>https://github.com/mbentley/docker-teamspeak</GitHub>
-  <Repository>mbentley/docker-teamspeak</Repository>
+  <Repository>coppit/mumble-server</Repository>
   <Support>n/a</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
