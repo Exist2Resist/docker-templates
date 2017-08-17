@@ -8,6 +8,7 @@
 	Docker image for MariaDB[br][br]
 	[span style=\'color: #00FF23;\']
 	Add a :label tag to the Repository field[br]
+	To do this switch to Advanced View with the toggle on the top right of this page[br]
 	Label options:[br]
 	10.3.0, 10.3 [br]
 	10.2.7, 10.2, 10, latest [br]
@@ -30,7 +31,7 @@
   <Support>n/a</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Network>host</Network>
+  <Network>bridge</Network>
   <WebUI></WebUI>
   <Icon>http://i.imgur.com/nOIZcJ1.png?1</Icon>
   <ExtraParams></ExtraParams>
