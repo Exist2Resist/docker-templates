@@ -4,16 +4,29 @@
   <Beta>False</Beta>
   <Category>Tools:Database</Category>
   <Overview>
-  library/mariadb:tag[br][br]
-	Docker image for MariaDB[br][br]	
-	
-	
-	[span style=\'color: #E80000;\'][/span][br][br]	
-	
+	[span style=\'color: #0046FF;\']library/mariadb:label[br]
+	Docker image for MariaDB[br][br]
+	[span style=\'color: #00FF23;\']
+	Add a :label tag to the Repository field[br]
+	Label options:[br]
+	10.3.0, 10.3 [br]
+	10.2.7, 10.2, 10, latest [br]
+	10.1.26, 10.1 [br]
+	10.0.32, 10.0 [br]
+	5.5.57, 5.5, 5[br][br]
+	[/span]
+	For example: [br]
+	library/mariadb:latest[br]
+	The above will pull the latest MariaDB version from the official docker, which at the time of writing is 10.2.7. [br][br]
+	library/mariadb:5.5 [br]
+	The above will pull the latest from the 5.5 branch[br][br]
+	If you do not add a label it will pull :latest version.[br][br]	
+	[span style=\'color: #E80000;\']WARNING: If you do not have a persisitent storage "Config Directory" value and you update your MariaDB docker the data will be wiped.[/span][br]
+	[/span]
   </Overview>
   <Registry>https://hub.docker.com/_/mariadb/</Registry>
   <GitHub>https://github.com/docker-library/mariadb</GitHub>
-  <Repository>library/mariadb</Repository>
+  <Repository>library/mariadb:latest</Repository>
   <Support>n/a</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
@@ -22,11 +35,10 @@
   <Icon>http://i.imgur.com/nOIZcJ1.png?1</Icon>
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="Config directory" Target="/var/lib/mysql" Mode="rw" Description="Optional: Host path to store MariaDB files. Optional" Display="always" Required="false"></Config>
-  <Config Type="Port" Name="TCP Port" Target="3306" Default="3306" Mode="tcp" Description="TCP port 1011" Display="always" Required="false">3306</Config>
-  <Config Type="Variable" Name="SQL root password" Target="MYSQL_ROOT_PASSWORD" Default="r00t!" Description="Root password" Display="always" Required="true"></Config>
+  <Config Type="Port" Name="TCP Port" Target="3306" Default="3306" Mode="tcp" Description="TCP port 3306" Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="SQL root password" Target="MYSQL_ROOT_PASSWORD" Default="" Description="Root password" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="SQL User name" Target="MYSQL_USER" Description="Optional: User name" Display="always" Required="false"></Config>
-  <Config Type="Variable" Name="SQL User password" Target="MYSQL_PASSWORD" Description="Optional: User password" Display="always" Required="false"></Config>
-  
+  <Config Type="Variable" Name="SQL User password" Target="MYSQL_PASSWORD" Description="Optional: User password" Display="always" Required="false"></Config> 
   <Config Type="Variable" Name="Run with user ID" Target="APP_UID" Default="99" Description="Run application with specified user id." Mask="false" Display="advanced" Required="true">99</Config>
   <Config Type="Variable" Name="Run with group ID" Target="APP_GID" Default="100" Description="Run application with specified group id." Mask="false" Display="advanced" Required="true">99</Config>
 </Container>
