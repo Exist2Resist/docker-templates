@@ -28,7 +28,7 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>bridge</Network>
-  <WebUI>http://localhost/fdroid</WebUI>
+  <WebUI>http://[IP]:[PORT:5000]/</WebUI>
   <Icon>https://i.imgur.com/w6dbBfD.png</Icon>
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="Config directory" Target="/data/fdroid" Default="/mnt/user/appdata/fdroid" Mode="rw" Description="Host path to store Fdroid apk files." Display="always" Required="true"></Config>
