@@ -4,22 +4,6 @@
   <Beta>False</Beta>
   <Category>Android:Playstore bridge repository</Category>
   <Overview>
-	NoMore201/playmaker[br][br]
-	Playmaker is a fdroid repository manager.[br][br]
-	This lets you download/update apps from the play store using your google account and configure repository with app you download.[br][br]
-	After you setup the server, repository will be available at the address http[s]://<playmaker_host>/fdroid.[br][br]
-	You can start downloading apps from play store.[br][br]
-	Server uses googleplay-api library, which is the python equivalent of the Java play-store-api library used by YalpStore.[br][br]
-	Features:[br][br]
-	* Download apks from google play store to your collection. Update them or delete if they are not needed anymore.[br][br]
-	* Manage the fdroid repository. You can update it manually, as you add/remove apks to your collection.[br][br]
-	* Non-blocking UI, you can browse the collection or search for an app while the server is updating the fdroid repository.[br][br]
-	* Responsive UI, usable also from a mobile device[br][br]
-	[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[br][br]
-	[/span]
-	create a /mnt/user/playmaker directory.[br]
-	unRAID Example:[br]
-	docker run -d --restart=always --net=bridge --name playmaker -p 5000:5000 -v /mnt/disks/DataDisk/data/fdroid:/data/fdroid -e PGID=100 -e PUID=99 nomore201/playmaker[br][br]
   </Overview>
   <Registry>https://hub.docker.com/r/nomore201/playmaker/</Registry>
   <GitHub>https://github.com/NoMore201/playmaker</GitHub>
