@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
-  <Name>Playmaker</Name>
-  
-  <Beta>False</Beta>
-  <Category>Android:Playstore bridge repository</Category>
-  <Overview>
-   NoMore201/playmaker[br][br]
+<Name>Playmaker</Name>
+<Beta>False</Beta>
+<Category>Android:Playstore bridge repository</Category>
+<Overview>
+NoMore201/playmaker[br][br]
 Playmaker is a fdroid repository manager.[br][br] 
 This lets you download/update apps from the play store using your google account and configure repository with app you download.[br][br]
 After you setup the server, repository will be available at the address http[s]://<playmaker_host>/fdroid.[br][br] 
@@ -16,7 +15,7 @@ Features:[br][br]
 - Manage the fdroid repository. You can update it manually, as you add/remove apks to your collection.[br][br]
 - Non-blocking UI, you can browse the collection or search for an app while the server is updating the fdroid repository.[br][br]
 - Responsive UI, usable also from a mobile device[br][br]
-	[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[br][br]
+[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[/span][br][br]
 	create a /mnt/user/playmaker directory.[br]
 		
 	unRAID Example:[br]
