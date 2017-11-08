@@ -23,7 +23,7 @@
   </Overview>
   <Registry>https://hub.docker.com/r/nomore201/playmaker/</Registry>
   <GitHub>https://github.com/NoMore201/playmaker</GitHub>
-  <Repository>NoMore201/playmaker</Repository>
+  <Repository>nomore201/playmaker/</Repository>
   <Support>n/a</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
