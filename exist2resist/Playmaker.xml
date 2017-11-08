@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>Playmaker</Name>
+  
+  <Beta>False</Beta>
+  <Category>Android:Playstore bridge repository</Category>
+  <Overview>
+   NoMore201/playmaker[br][br]
+Playmaker is a fdroid repository manager.[br][br] 
+This lets you download/update apps from the play store using your google account and configure repository with app you download.[br][br]
+After you setup the server, repository will be available at the address http[s]://<playmaker_host>/fdroid.[br][br] 
+You can start downloading apps from play store.[br][br]
+Server uses googleplay-api library, which is the python equivalent of the Java play-store-api library used by YalpStore.[br][br]
+Features:[br][br]
+- Download apks from google play store to your collection. Update them or delete if they are not needed anymore.[br][br]
+- Manage the fdroid repository. You can update it manually, as you add/remove apks to your collection.[br][br]
+- Non-blocking UI, you can browse the collection or search for an app while the server is updating the fdroid repository.[br][br]
+- Responsive UI, usable also from a mobile device[br][br]
+	[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[br][br]
+	create a /mnt/user/playmaker directory.[br]
+		
+	unRAID Example:[br]
+  docker run -d --restart=always --net=bridge --name playmaker -p 5000:5000 -v /mnt/disks/DataDisk/data/fdroid:/data/fdroid -e PGID=100 -e PUID=99 nomore201/playmaker [br][br]
+  [br]
+  </Overview>
+  <Registry>https://hub.docker.com/r/nomore201/playmaker/</Registry>
+  <GitHub>https://github.com/NoMore201/playmaker</GitHub>
+  <Repository>NoMore201/playmaker</Repository>
+  <Support>n/a</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <WebUI>http://localhost/fdroid</WebUI>
+  <Icon>https://i.imgur.com/w6dbBfD.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Config Type="Path" Name="Config directory" Target="/data/fdroid" Default="/mnt/user/appdata/fdroid" Mode="rw" Description="Host path to store Fdroid apk files." Display="always" Required="true"></Config>
+  <Config Type="Port" Name="TCP Port" Target="5000" Default="5000" Mode="tcp" Description="TCP port 5000" Display="always" Required="true">5000</Config>
+  <Config Type="Variable" Name="Run with user ID" Target="APP_UID" Default="99" Description="Run application with specified user id." Mask="false" Display="advanced" Required="true">99</Config>
+  <Config Type="Variable" Name="Run with group ID" Target="APP_GID" Default="100" Description="Run application with specified group id." Mask="false" Display="advanced" Required="true">100</Config>
+</Container>
