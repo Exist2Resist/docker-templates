@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>GitLab CE</Name>
+  <Beta>False</Beta>
+  <Category>Software:Git collaboration software</Category>
+  <Overview>
+    	gitlab/gitlab-ce[br][br]
+	    GitLab Community Edition is a software development collaboration tool.[br][br]
+	    This software let's you commit and pull changes from a shared repository.[br][br]
+	  After you setup the server, repository will be available at the address [br][br]
+	  [br][br]
+	  [br][br]
+	  Features:[br][br]
+	  * [br][br]
+	  * [br][br]
+	  * [br][br]
+	  * [br][br]
+	[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[br][br]
+	[/span]
+	create a /mnt/user/gitlab directory.[br]
+	unRAID Example:[br]
+	docker run -d --restart=always --net=bridge --name playmaker -p 5000:5000 -v /mnt/disks/DataDisk/data/fdroid:/data/fdroid -e PGID=100 -e PUID=99 nomore201/playmaker
+  </Overview>
+  <Registry>https://hub.docker.com/r/gitlab/gitlab-ce/</Registry>
+  <GitHub>https://github.com/gitlabhq/gitlabhq</GitHub>
+  <Repository>gitlab/gitlab-ce</Repository>
+  <Support>https://about.gitlab.com/</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <WebUI>http://[IP]:[PORT:5000]/</WebUI>
+  <Icon>https://i.imgur.com/w6dbBfD.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Config Type="Path" Name="Config directory" Target="/data/fdroid" Default="/mnt/user/appdata/fdroid" Mode="rw" Description="Host path to store Fdroid apk files." Display="always" Required="true"></Config>
+  <Config Type="Port" Name="TCP Port" Target="5000" Default="5000" Mode="tcp" Description="TCP port 5000" Display="always" Required="true">5000</Config>
+  <Config Type="Variable" Name="Run with user ID" Target="APP_UID" Default="99" Description="Run application with specified user id." Mask="false" Display="advanced" Required="true">99</Config>
+  <Config Type="Variable" Name="Run with group ID" Target="APP_GID" Default="100" Description="Run application with specified group id." Mask="false" Display="advanced" Required="true">100</Config>
+</Container>
