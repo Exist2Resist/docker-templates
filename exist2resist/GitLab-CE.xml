@@ -29,7 +29,7 @@
   <Privileged>false</Privileged>
   <Network>bridge</Network>
   <WebUI>http://[IP]:[PORT:5000]/</WebUI>
-  <Icon>https://i.imgur.com/w6dbBfD.png</Icon>
+  <Icon>https://i.imgur.com/pv8yaRx.png</Icon>
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="Config directory" Target="/data/fdroid" Default="/mnt/user/appdata/fdroid" Mode="rw" Description="Host path to store Fdroid apk files." Display="always" Required="true"></Config>
   <Config Type="Port" Name="TCP Port" Target="5000" Default="5000" Mode="tcp" Description="TCP port 5000" Display="always" Required="true">5000</Config>
