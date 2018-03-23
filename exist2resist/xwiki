@@ -4,16 +4,19 @@
   <Beta>False</Beta>
   <Category>Documentation:Wiki</Category>
   <Overview>
-    mbentley/teamspeak:latest[br][br]
+    xwiki:mysql-tomcat[br][br]
 	Docker image for Xwiki[br][br]	
 	The Advanced Open Source Enterprise Wiki[br][br]
-	[br][br]
+	This container is provided without the MySQL database container.[br]
+	The MariaDB container is available in my repository as well.[br]
 	[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[br][br]
 	create a /mnt/user/appdata/xwiki directory.[br]
+	create a databse in your MySQL/MariaDB
 	[/span][br][br]	
 	[br][br]
-	unRAID Example:[br]
-	docker run -d --restart=always --net=bridge --name teamspeak -p 9987:9987/udp -p 30033:30033 -p 10011:10011  -p 41144:41144 -v /mnt/disks/DataDisk/data/TS3:/data -e PGID=99 -e PUID=99 mbentley/teamspeak [br][br]
+	unRAID Example to start Xwiki using a MySQL back end:[br]
+	docker run --net=xwiki-nw --name xwiki -p 8080:8080 -v /my/own/xwiki:/usr/local/xwiki -e DB_USER=xwiki -e DB_PASSWORD=xwiki -e DB_DATABASE=xwiki -e DB_HOST=mysql-xwiki xwiki:mysql-tomcat[br][br]
+	[br][br]
 	[span style=\'color: #5AD031;\']In order to get the credentials for your TS server, check the container logs as it will output the serveradmin password and your ServerAdmin privilege key.[/span][br][br]
 	[span style=\'color: #E80000;\']Please set the environment variable TS3SERVER_LICENSE to "accept" [/span]in order to accept the license agreement.
 	[br][span style=\'color: #E80000;\']Alternatively, create a file named ".ts3server_license_accepted" in the working directory[/span] or start the server with the command line parameter "license_accepted=1".
@@ -22,7 +25,7 @@
   </Overview>
   <Registry>https://hub.docker.com/_/xwiki/</Registry>
   <GitHub>https://github.com/xwiki-contrib/docker-xwiki</GitHub>
-  <Repository>_/xwiki</Repository>
+  <Repository>_/xwiki:mysql-tomcat[</Repository>
   <Support>n/a</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
@@ -30,11 +33,11 @@
   <WebUI></WebUI>
   <Icon>https://raw.githubusercontent.com/docker-library/docs/6fb07a8dacbad5cc548b87e4c267823a4aa98660/xwiki/logo.png</Icon>
   <ExtraParams></ExtraParams>
-  <Config Type="Path" Name="Config directory" Target="/data" Default="/mnt/user/appdata/teamspeak" Mode="rw" Description="Host path to store Teamspeak files." Display="always" Required="true"></Config>
-  <Config Type="Port" Name="TCP Port" Target="1011" Default="1011" Mode="tcp" Description="TCP port 1011" Display="always" Required="true">1011</Config>
-  <Config Type="Port" Name="TCP Port 2" Target="30033" Default="30033" Mode="tcp" Description="TCP port 30033" Display="always" Required="true">30033</Config>
-  <Config Type="Port" Name="TCP Port 3" Target="41144" Default="41144" Mode="tcp" Description="TCP port 41144" Display="always" Required="true">41144</Config> 
-  <Config Type="Port" Name="UDP Port" Target="9987" Default="9987" Mode="udp" Description="UDP port 9987" Display="always" Required="true">9987</Config>
+  <Config Type="Path" Name="Config directory" Target="/data" Default="/mnt/user/appdata/xwiki" Mode="rw" Description="Host path to store Xwiki files." Display="always" Required="true"></Config>
+  <Config Type="Port" Name="TCP Port" Target="8080" Default="8080" Mode="tcp" Description="TCP port 8080" Display="always" Required="true">8080</Config>
+  <Config Type="Variable" Name="Database Host Computer" Target="DB_HOST" Default="localhost" Description="Sets the IP or Hostname of th ecomputer that hosts MySQL" Mask="false" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="Database Privileged User" Target="DB_USER" Default="xwiki" Description="User that has privileges on the database" Mask="false" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="Database User Password" Target="DB_PASSWORD" Default="xwiki" Description="DB User password" Mask="false" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="Run with user ID" Target="APP_UID" Default="99" Description="Run application with specified user id." Mask="false" Display="advanced" Required="true">99</Config>
-  <Config Type="Variable" Name="Run with group ID" Target="APP_GID" Default="100" Description="Run application with specified group id." Mask="false" Display="advanced" Required="true">99</Config>
+  <Config Type="Variable" Name="Run with group ID" Target="APP_GID" Default="100" Description="Run application with specified group id." Mask="false" Display="advanced" Required="true">100</Config>
 </Container>
