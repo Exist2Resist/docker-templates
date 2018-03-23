@@ -31,7 +31,7 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>bridge</Network>
-  <WebUI>[localhost]:[Port]</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <Icon>https://i.imgur.com/VF8rhSa.png</Icon>
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="Config directory" Target="/data" Default="/mnt/user/appdata/xwiki" Mode="rw" Description="Host path to store Xwiki files." Display="always" Required="true"></Config>
