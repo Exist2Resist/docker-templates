@@ -26,7 +26,7 @@
   </Overview>
   <Registry>https://hub.docker.com/_/xwiki/</Registry>
   <GitHub>https://github.com/xwiki-contrib/docker-xwiki</GitHub>
-  <Repository>_/xwiki[</Repository>
+  <Repository>xwiki:mysql-tomcat</Repository>
   <Support>n/a</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
