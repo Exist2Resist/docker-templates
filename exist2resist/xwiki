@@ -11,8 +11,14 @@
 	The MariaDB container is available in my repository as well.[br]
 	[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[br][br]
 	create a /mnt/user/appdata/xwiki directory.[br]
-	create a databse in your MySQL/MariaDB
+	create a databse in your MySQL/MariaDB named xwiki
 	[/span][br][br]	
+	You can use software such as HeidiSQL to connect to your database instance and create a database and user.[br]
+	Example of DB and user create.[br]
+	create database xwiki;[br]
+	create user 'xwiki' identified by 'xwiki';
+	grant all on xwiki.* to 'xwiki';
+	flush privileges;
 	[br][br]
 	unRAID Example to start Xwiki using a MySQL back end:[br]
 	docker run --net=xwiki-nw --name xwiki -p 8080:8080 -v /my/own/xwiki:/usr/local/xwiki -e DB_USER=xwiki -e DB_PASSWORD=xwiki -e DB_DATABASE=xwiki -e DB_HOST=mysql-xwiki xwiki:mysql-tomcat[br][br]
@@ -30,7 +36,7 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>bridge</Network>
-  <WebUI></WebUI>
+  <WebUI>[localhost]:[Port]</WebUI>
   <Icon>https://raw.githubusercontent.com/docker-library/docs/6fb07a8dacbad5cc548b87e4c267823a4aa98660/xwiki/logo.png</Icon>
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="Config directory" Target="/data" Default="/mnt/user/appdata/xwiki" Mode="rw" Description="Host path to store Xwiki files." Display="always" Required="true"></Config>
