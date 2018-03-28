@@ -34,7 +34,7 @@
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <Icon>https://i.imgur.com/VF8rhSa.png</Icon>
   <ExtraParams></ExtraParams>
-  <Config Type="Path" Name="Config directory" Target="/data" Default="/mnt/user/appdata/xwiki" Mode="rw" Description="Host path to store Xwiki files." Display="always" Required="true"></Config>
+  <Config Type="Path" Name="Config directory" Target="/usr/local/xwiki" Default="/mnt/user/appdata/xwiki" Mode="rw" Description="Host path to store Xwiki files." Display="always" Required="true"></Config>
   <Config Type="Port" Name="TCP Port" Target="8080" Default="8080" Mode="tcp" Description="TCP port 8080" Display="always" Required="true">8080</Config>
   <Config Type="Variable" Name="Database Host Computer" Target="DB_HOST" Default="localhost" Description="Sets the IP or Hostname of the computer that hosts MySQL" Mask="false" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="Database Privileged User" Target="DB_USER" Default="xwiki" Description="User that has privileges on the database" Mask="false" Display="always" Required="true"></Config>
