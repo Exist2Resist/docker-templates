@@ -2,11 +2,11 @@
 <Container version="2">
   <Name>Syncthing</Name>
   <Beta>False</Beta>
-  <Category>Documentation:Wiki</Category>
+  <Category>Network:Cloud:Backup</Category>
   <Overview>
-    xwiki:mysql-tomcat[br][br]
-	Docker image for Xwiki[br][br]	
-	The Advanced Open Source Enterprise Wiki[br][br]
+    Syncthing[br][br]
+	Docker template for official Syncthing container[br][br]	
+	Syncthing is a continuous file synchronization program. It synchronizes files between two or more computers.[br][br]
 	This container is provided without the MySQL database container.[br]
 	The MariaDB container is available in my repository as well.[br][br]
 	[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[br][br]
@@ -37,8 +37,9 @@
   <Config Name="Host Port 1" Target="8384" Default="8384" Mode="tcp" Description="Container Port: 8384" Type="Port" Display="always" Required="true" Mask="false">8384</Config>
   <Config Name="Host Port 2" Target="21027" Default="21027" Mode="udp" Description="Container Port: 21027" Type="Port" Display="always" Required="true" Mask="false">21027</Config>
   <Config Name="Host Port 3" Target="22000" Default="22000" Mode="tcp" Description="Container Port: 22000" Type="Port" Display="always" Required="true" Mask="false">22000</Config>
-  <Config Name="Host Path 2" Target="/var/syncthing" Default="" Mode="rw" Description="Container Path: /sync" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Sync/</Config>
+  <Config Name="AppData Config Path" Target="/var/syncthing/config" Default="/mnt/user/appdata/syncthing" Mode="rw" Description="Configuration Folder" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Sync Folder Path" Target="/var/syncthing" Default="/mnt/user/appdata/sync" Mode="rw" Description="Syncronization Folder" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
-  <Config Name="AppData Config Path" Target="/var/syncthing/config" Default="/mnt/user/appdata/syncthing" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  
 </Container>
