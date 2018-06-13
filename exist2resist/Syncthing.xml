@@ -1,1 +1,44 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>Syncthing</Name>
+  <Beta>False</Beta>
+  <Category>Documentation:Wiki</Category>
+  <Overview>
+    xwiki:mysql-tomcat[br][br]
+	Docker image for Xwiki[br][br]	
+	The Advanced Open Source Enterprise Wiki[br][br]
+	This container is provided without the MySQL database container.[br]
+	The MariaDB container is available in my repository as well.[br][br]
+	[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[br][br]
+	create a /mnt/user/appdata/xwiki directory.[br]
+	create a databse in your MySQL/MariaDB named xwiki[br]
+	[/span][br][br]	
+	You can use software such as HeidiSQL to connect to your database instance and create a database and user.[br]
+	Example of DB and user create.[br]
+	create database xwiki character set utf8 collate utf8_bin;[br]
+	create user 'xwiki' identified by 'xwiki';[br]
+	grant all on xwiki.* to 'xwiki';[br]
+	flush privileges;[br]
+	[br][br]
+	unRAID Example to start Xwiki using a MySQL back end:[br]
+	docker run --net=xwiki-nw --name xwiki -p 8080:8080 -v /my/own/xwiki:/usr/local/xwiki -e DB_USER=xwiki -e DB_PASSWORD=xwiki -e DB_DATABASE=xwiki -e DB_HOST=mysql-xwiki xwiki:mysql-tomcat[br][br]
+	[br][br]
+  </Overview>
+  <Registry>https://hub.docker.com/r/syncthing/syncthing/</Registry>
+  <GitHub>https://github.com/syncthing/syncthing</GitHub>
+  <Repository>syncthing/syncthing</Repository>
+  <Support>https://forum.syncthing.net/c/support</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <WebUI>http://[IP]:[PORT:8384]</WebUI>
+  <Icon>https://i.imgur.com/w9IPBez.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Config Name="Host Port 1" Target="8384" Default="8384" Mode="tcp" Description="Container Port: 8384" Type="Port" Display="always" Required="true" Mask="false">8384</Config>
+  <Config Name="Host Port 2" Target="21027" Default="21027" Mode="udp" Description="Container Port: 21027" Type="Port" Display="always" Required="true" Mask="false">21027</Config>
+  <Config Name="Host Port 3" Target="22000" Default="22000" Mode="tcp" Description="Container Port: 22000" Type="Port" Display="always" Required="true" Mask="false">22000</Config>
+  <Config Name="Host Path 2" Target="/var/syncthing" Default="" Mode="rw" Description="Container Path: /sync" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Sync/</Config>
+  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="AppData Config Path" Target="/var/syncthing/config" Default="/mnt/user/appdata/syncthing" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+</Container>
