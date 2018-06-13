@@ -8,10 +8,13 @@
 	Docker template for official Syncthing container[br][br]	
 	Syncthing is a continuous file synchronization program. It synchronizes files between two or more computers.[br][br]	
 	[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[br][br]
-	create a /mnt/user/appdata/syncthing and /mnt/user/appdata/syncthingconfig directories.[br]	
+	create a /mnt/user/appdata/syncthing and /mnt/user/appdata/syncthingconfig directories.[br]
+	then: [br]
+	chown 1000 /mnt/user/appdata/syncthing [br]
+	chown 1000 /mnt/user/appdata/syncthingconfig [br]
 	[/span][br][br]	
 	unRAID Example to start Syncthing:[br]
-	docker run --net=bridge --name Syncthing -p 8384:8384 -p 22000:22000 -p 21027:21027/udp -v /my/own/configdir:/var/syncthing/config -v /my/own/syncdir:/var/syncthing/ -e PGID=100 -e PUID=99[br][br]
+	docker run --net=bridge --name Syncthing -p 8384:8384 -p 22000:22000 -p 21027:21027/udp -v /my/own/configdir:/var/syncthing/config -v /my/own/syncdir:/var/syncthing/ -e PGID=100 -e PUID=1000[br][br]
 	[br][br]
   </Overview>
   <Registry>https://hub.docker.com/r/syncthing/syncthing/</Registry>
@@ -29,7 +32,7 @@
   <Config Name="Host Port 3" Target="22000" Default="22000" Mode="tcp" Description="Container Port: 22000" Type="Port" Display="always" Required="true" Mask="false">22000</Config>
   <Config Name="AppData Config Path" Target="/var/syncthing/config" Default="/mnt/user/appdata/syncthing" Mode="rw" Description="Configuration Folder" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Sync Folder Path" Target="/var/syncthing" Default="/mnt/user/appdata/sync" Mode="rw" Description="Syncronization Folder" Type="Path" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
-  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="Key 1" Target="PUID" Default="1000" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   
 </Container>
