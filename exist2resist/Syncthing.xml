@@ -10,11 +10,11 @@
 	[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[br][br]
 	create a /mnt/user/appdata/syncthing and /mnt/user/appdata/syncthingconfig directories.[br]
 	then: [br]
-	chown 1000 /mnt/user/appdata/syncthing [br]
-	chown 1000 /mnt/user/appdata/syncthingconfig [br]
+	chown 1000:1000 /mnt/user/appdata/syncthing [br]
+	chown 1000:1000 /mnt/user/appdata/syncthingconfig [br]
 	[/span][br][br]	
 	unRAID Example to start Syncthing:[br]
-	docker run --net=bridge --name Syncthing -p 8384:8384 -p 22000:22000 -p 21027:21027/udp -v /my/own/configdir:/var/syncthing/config -v /my/own/syncdir:/var/syncthing/ -e PGID=100 -e PUID=1000[br][br]
+	docker run --net=bridge --name Syncthing -p 8384:8384 -p 22000:22000 -p 21027:21027/udp -v /my/own/configdir:/var/syncthing/config -v /my/own/syncdir:/var/syncthing/ -e PGID=1000 -e PUID=1000[br][br]
 	[br][br]
   </Overview>
   <Registry>https://hub.docker.com/r/syncthing/syncthing/</Registry>
