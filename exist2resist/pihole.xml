@@ -1,3 +1,45 @@
 docker run -d --name pihole -p 53:53/tcp -p 53:53/udp -p 67:67/udp -p 80:80 -p 443:443 -v "${DOCKER_CONFIGS}/pihole/:/etc/pihole/" \
     -v "${DOCKER_CONFIGS}/dnsmasq.d/:/etc/dnsmasq.d/" -e ServerIP="${IP}" -e ServerIPv6="${IPv6}" --restart=unless-stopped \
     --cap-add=NET_ADMIN pihole/pihole:latest
+
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>Syncthing</Name>
+  <Beta>False</Beta>
+  <Category>Network:Cloud:Backup</Category>
+  <Overview>
+    Syncthing[br][br]
+	Docker template for official Syncthing container[br][br]	
+	Syncthing is a continuous file synchronization program. It synchronizes files between two or more computers.[br][br]	
+	[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[br][br]
+	create a /mnt/user/appdata/syncthing and /mnt/user/appdata/syncthingconfig directories.[br]
+	then: [br]
+	/mnt/user/appdata/syncthing [br]
+	/mnt/user/appdata/syncthingconfig [br]
+	[/span][br][br]	
+	unRAID Example to start Syncthing:[br]
+	docker run -d --name pihole -p 53:53/tcp -p 53:53/udp -p 67:67/udp -p 80:80 -p 443:443 -v "${DOCKER_CONFIGS}/pihole/:/etc/pihole/" \
+    -v "${DOCKER_CONFIGS}/dnsmasq.d/:/etc/dnsmasq.d/" -e ServerIP="${IP}" -e ServerIPv6="${IPv6}" --restart=unless-stopped \
+    --cap-add=NET_ADMIN pihole/pihole:latest
+	[br][br]
+  </Overview>
+  <Registry>https://hub.docker.com/r/syncthing/syncthing/</Registry>
+  <GitHub>https://github.com/syncthing/syncthing</GitHub>
+  <Repository>syncthing/syncthing</Repository>
+  <Support>https://forum.syncthing.net/c/support</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <WebUI>http://[IP]:[PORT:8384]</WebUI>
+  <Icon>https://i.imgur.com/w9IPBez.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Config Name="Host Port 1" Target="53" Default="53" Mode="tcp" Description="DNS tcp Container Port: 53" Type="Port" Display="always" Required="true" Mask="false">53</Config>
+  <Config Name="Host Port 2" Target="53" Default="53" Mode="udp" Description="DNS udp Container Port: 53" Type="Port" Display="always" Required="true" Mask="false">53</Config>
+  <Config Name="Host Port 3" Target="80" Default="80" Mode="tcp" Description="HTTP Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">80</Config>
+  <Config Name="Host Port 4" Target="443" Default="443" Mode="tcp" Description="HTTPS Container Port: 443" Type="Port" Display="always" Required="true" Mask="false">443</Config>
+  <Config Name="AppData Config Path" Target="/etc/pihole/" Default="/mnt/user/appdata/pihole/pihole" Mode="rw" Description="Configuration Folder" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="DNS masq Folder Path" Target="/etc/dnsmasq.d/" Default="/mnt/user/appdata/pihole/dnsmasq.d" Mode="rw" Description="dnsmasq.d Folder" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Key 1" Target="PUID" Default="1000" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Key 2" Target="PGID" Default="1000" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  
+</Container>
