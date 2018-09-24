@@ -21,7 +21,7 @@
   </Overview>
   <Registry>https://hub.docker.com/r/pihole/pihole/</Registry>
   <GitHub>https://github.com/pi-hole/docker-pi-hole</GitHub>
-  <Repository>syncthing/syncthing</Repository>
+  <Repository>pi-hole/docker-pi-hole</Repository>
   <Support></Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
