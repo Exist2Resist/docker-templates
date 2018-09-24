@@ -1,10 +1,6 @@
-docker run -d --name pihole -p 53:53/tcp -p 53:53/udp -p 67:67/udp -p 80:80 -p 443:443 -v "${DOCKER_CONFIGS}/pihole/:/etc/pihole/" \
-    -v "${DOCKER_CONFIGS}/dnsmasq.d/:/etc/dnsmasq.d/" -e ServerIP="${IP}" -e ServerIPv6="${IPv6}" --restart=unless-stopped \
-    --cap-add=NET_ADMIN pihole/pihole:latest
-
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
-  <Name>Syncthing</Name>
+  <Name>PiHole</Name>
   <Beta>False</Beta>
   <Category>Network:DNS:Server</Category>
   <Overview>
@@ -23,15 +19,15 @@ docker run -d --name pihole -p 53:53/tcp -p 53:53/udp -p 67:67/udp -p 80:80 -p 4
     --cap-add=NET_ADMIN pihole/pihole:latest
 	[br][br]
   </Overview>
-  <Registry>https://hub.docker.com/r/syncthing/syncthing/</Registry>
-  <GitHub>https://github.com/syncthing/syncthing</GitHub>
+  <Registry>https://hub.docker.com/r/pihole/pihole/</Registry>
+  <GitHub></GitHub>
   <Repository>syncthing/syncthing</Repository>
-  <Support>https://forum.syncthing.net/c/support</Support>
+  <Support></Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>bridge</Network>
-  <WebUI>http://[IP]:[PORT:8384]</WebUI>
-  <Icon>https://i.imgur.com/w9IPBez.png</Icon>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Icon>https://i.imgur.com/jwVrmka.png</Icon>
   <ExtraParams></ExtraParams>
   <Config Name="Host Port 1" Target="53" Default="53" Mode="tcp" Description="DNS tcp Container Port: 53" Type="Port" Display="always" Required="true" Mask="false">53</Config>
   <Config Name="Host Port 2" Target="53" Default="53" Mode="udp" Description="DNS udp Container Port: 53" Type="Port" Display="always" Required="true" Mask="false">53</Config>
@@ -42,7 +38,7 @@ docker run -d --name pihole -p 53:53/tcp -p 53:53/udp -p 67:67/udp -p 80:80 -p 4
   <Config Type="Variable" Name="Host v4 IP address" Target="ServerIP" Default="" Description="IPv4 address of PiHole" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="Host v6 IP address" Target="ServerIPv6" Default="" Description="IPv6 address of PiHole" Display="always" Required="false"></Config>
   <Config Type="Variable" Name="Use IPv6" Target="IPv6" Default="False" Description="Strips out IPv6 config for unraid" Display="always" Required="true">False</Config>	
-  <Config Type="Variable" Name="Time Zone" Target="TZ" Default="America/Edmonton" Description="Set the timezon of PiHole" Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="Time Zone" Target="TZ" Default="America/Edmonton" Description="Set the timezone of PiHole" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="Admin Password" Target="WEBPASSWORD" Default="P@s0!5!1" Description="Admin password of web console" Display="always" Required="true"></Config>	
   <Config Type="Variable" Name="DNS server 1" Target="DNS1" Default="8.8.8.8" Description="DNS server" Display="always" Required="false"></Config>	
   <Config Type="Variable" Name="DNS server 2" Target="DNS2" Default="8.8.4.4" Description="Backup DNS sever" Display="always" Required="false"></Config>		
