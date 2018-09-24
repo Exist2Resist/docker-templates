@@ -25,7 +25,7 @@
   <Support></Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Network>bridge</Network>
+  <Network>br0</Network>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <Icon>https://i.imgur.com/jwVrmka.png</Icon>
   <ExtraParams></ExtraParams>
