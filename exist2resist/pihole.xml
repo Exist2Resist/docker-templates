@@ -4,9 +4,12 @@
   <Beta>False</Beta>
   <Category>Network:DNS:Server</Category>
   <Overview>
-    Syncthing[br][br]
+    Pi-Hole[br]
 	Docker template for official PiHole container[br][br]	
-	[br][br]	
+	[br]
+	This template is set to use network br0, your unraid bridge network may have a different name. 
+	You will need to assign a static IP for this docker as it does not use the docker network.
+	[br]	
 	[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[br][br]
 	create a /mnt/user/appdata/pihole/pihole and /mnt/user/appdata/pihole/dnsmasq.d directories.[br]
 	then: [br]
