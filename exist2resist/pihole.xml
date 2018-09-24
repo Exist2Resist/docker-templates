@@ -21,7 +21,7 @@
   </Overview>
   <Registry>https://hub.docker.com/r/pihole/pihole/</Registry>
   <GitHub>https://github.com/pi-hole/docker-pi-hole</GitHub>
-  <Repository>pi-hole/docker-pi-hole</Repository>
+  <Repository>pihole/pihole</Repository>
   <Support></Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
