@@ -26,7 +26,7 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>br0</Network>
-  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <WebUI>http://[IP]:[PORT:80]/admin</WebUI>
   <Icon>https://i.imgur.com/jwVrmka.png</Icon>
   <ExtraParams></ExtraParams>
   <Config Name="Host Port 1" Target="53" Default="53" Mode="tcp" Description="DNS tcp Container Port: 53" Type="Port" Display="always" Required="true" Mask="false">53</Config>
