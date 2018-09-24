@@ -20,7 +20,7 @@
 	[br][br]
   </Overview>
   <Registry>https://hub.docker.com/r/pihole/pihole/</Registry>
-  <GitHub></GitHub>
+  <GitHub>https://github.com/pi-hole/docker-pi-hole</GitHub>
   <Repository>syncthing/syncthing</Repository>
   <Support></Support>
   <BindTime>true</BindTime>
@@ -42,7 +42,7 @@
   <Config Type="Variable" Name="Admin Password" Target="WEBPASSWORD" Default="P@s0!5!1" Description="Admin password of web console" Display="always" Required="true"></Config>	
   <Config Type="Variable" Name="DNS server 1" Target="DNS1" Default="8.8.8.8" Description="DNS server" Display="always" Required="false"></Config>	
   <Config Type="Variable" Name="DNS server 2" Target="DNS2" Default="8.8.4.4" Description="Backup DNS sever" Display="always" Required="false"></Config>		
-  <Config Name="Key 1" Target="PUID" Default="100" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Key 2" Target="PGID" Default="99" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   
 </Container>
