@@ -12,14 +12,11 @@
 	[br]	
 	[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[br][br]
 	create a /mnt/user/appdata/pihole/pihole and /mnt/user/appdata/pihole/dnsmasq.d directories.[br]
-	then: [br]
-	/mnt/user/appdata/pihole/pihole [br]
-	/mnt/user/appdata/pihole/dnsmasq.d [br]
 	[/span][br][br]	
 	unRAID Example to start PiHole:[br]
 	docker run -d --name pihole -p 53:53/tcp -p 53:53/udp -p 67:67/udp -p 80:80 -p 443:443 -v "${DOCKER_CONFIGS}/pihole/:/etc/pihole/" \
-    -v "${DOCKER_CONFIGS}/dnsmasq.d/:/etc/dnsmasq.d/" -e ServerIP="${IP}" -e ServerIPv6="${IPv6}" --restart=unless-stopped \
-    --cap-add=NET_ADMIN pihole/pihole:latest
+        -v "${DOCKER_CONFIGS}/dnsmasq.d/:/etc/dnsmasq.d/" -e ServerIP="${IP}" -e ServerIPv6="${IPv6}" --restart=unless-stopped \
+        --cap-add=NET_ADMIN pihole/pihole:latest
 	[br][br]
   </Overview>
   <Registry>https://hub.docker.com/r/pihole/pihole/</Registry>
