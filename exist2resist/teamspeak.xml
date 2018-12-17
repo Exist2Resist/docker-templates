@@ -31,7 +31,7 @@
   <Icon>http://i.imgur.com/1l3C4n3.png</Icon>
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="Config directory" Target="/data" Default="/mnt/user/appdata/teamspeak" Mode="rw" Description="Host path to store Teamspeak files." Display="always" Required="true"></Config>
-  <Config Type="Port" Name="TCP Port" Target="1011" Default="1011" Mode="tcp" Description="TCP port 1011" Display="always" Required="true">1011</Config>
+  <Config Type="Port" Name="TCP Port" Target="10011" Default="10011" Mode="tcp" Description="TCP port 10011" Display="always" Required="true">10011</Config>
   <Config Type="Port" Name="TCP Port 2" Target="30033" Default="30033" Mode="tcp" Description="TCP port 30033" Display="always" Required="true">30033</Config>
   <Config Type="Port" Name="TCP Port 3" Target="41144" Default="41144" Mode="tcp" Description="TCP port 41144" Display="always" Required="true">41144</Config> 
   <Config Type="Port" Name="UDP Port" Target="9987" Default="9987" Mode="udp" Description="UDP port 9987" Display="always" Required="true">9987</Config>
