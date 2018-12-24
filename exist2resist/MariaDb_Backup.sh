@@ -41,5 +41,5 @@
  DAYS=14
 
  #Command to delte old backups.
- nice find . -mtime +$DAYS -exec rm *.sql {} \;
+ nice find . -mtime +$DAYS -exec rm {} \;
 
