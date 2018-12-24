@@ -8,4 +8,4 @@ tar -cf $SOURCE $DESTINATION
 
 cd $DESTINATION
 
-nice find . -mtime +$DAYS rm {} \;  
+nice find . -mtime +$DAYS -exec rm {} \; 
