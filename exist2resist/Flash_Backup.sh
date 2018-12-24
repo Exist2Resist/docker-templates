@@ -1,3 +1,4 @@
+#!/bin/bash
 SOURCE="/boot/*"
 DESTINATION="/mnt/disks/DataDisk/backups/flash/"
 FILENAME="FLASH_`date +%F_%H-%M-%S`.tar"
