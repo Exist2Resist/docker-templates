@@ -35,4 +35,11 @@
  SQL_DUMP_COMMAND="mysqldump -u $USERNAME  -p'$PASSWORD' $DATABASE > $DESTINATION$BACKUPNAME"
  
  #Remove the '-it' switch from the below otherwise you will get an ERROR “The input device is not a TTY”
- docker exec $CONTAINER sh -c "$SQL_DUMP_COMMAND" 
+ docker exec -it $CONTAINER sh -c "$SQL_DUMP_COMMAND"
+ 
+ #Days vaiable used to determine how long backups should be kept for.
+ DAYS=14
+
+ #Command to delte old backups.
+ nice find . -mtime +$DAYS -exec rm *.sql {} \;
+
