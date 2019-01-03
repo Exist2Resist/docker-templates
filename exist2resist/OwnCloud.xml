@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>OwnCloud</Name>
+  <Beta>False</Beta>
+  <Category>Network:Cloud:Backup/Sharing</Category>
+  <Overview>
+  OwnCloud[br][br]
+	[/span][br][br]	
+	unRAID Example to start OwnCloud:[br]
+  docker run --net=br0 --name OwnCloud -p 80:80 -v /yourfolder/apps:/var/www/html/apps \
+  -v /yourfolder/config:/var/www/html/config -v /yourfolder/data:/var/www/html/data \
+  -e PGID=1000 -e PUID=1000
+	[br][br]
+  </Overview>
+  <Registry>https://hub.docker.com/_/owncloud/</Registry>
+  <GitHub>https://github.com/owncloud-docker/server</GitHub>
+  <Repository>owncloud</Repository>
+  <Support></Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>br0</Network>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Icon>https://i.imgur.com/w9IPBez.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Config Name="Host Port" Target="80" Default="8384" Mode="tcp" Description="HTTP Port: 80" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Apps Path" Target="/var/www/html/apps" Default="/mnt/user/appdata/OwnCloud/apps" Mode="rw" Description="Installed Apps Folder" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Configuration Folder" Target="/var/www/html/config" Default="/mnt/user/appdata/OwnCloud/config" Mode="rw" Description="Configuration Folder" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Data Folder" Target="/var/www/html/data" Default="/mnt/user/OwnCloud" Mode="rw" Description="Data Folder" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="true" Mask="true"></Config>  
+</Container>
