@@ -7,7 +7,7 @@
   OwnCloud[br][br]
 	[/span][br][br]	
 	unRAID Example to start OwnCloud:[br]
-  docker run --net=br0 --name OwnCloud -p 80:80 -v /yourfolder/apps:/var/www/html/apps \
+  docker run --net=bridge --name OwnCloud -p 80:80 -v /yourfolder/apps:/var/www/html/apps \
   -v /yourfolder/config:/var/www/html/config -v /yourfolder/data:/var/www/html/data \
   -e PGID=99 -e PUID=100
 	[br][br]
@@ -18,7 +18,7 @@
   <Support></Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Network>br0</Network>
+  <Network>bridge</Network>
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <Icon>https://i.imgur.com/qz7hXbc.png</Icon>
   <ExtraParams></ExtraParams>
