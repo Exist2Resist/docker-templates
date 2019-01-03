@@ -22,10 +22,10 @@
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <Icon>https://i.imgur.com/w9IPBez.png</Icon>
   <ExtraParams></ExtraParams>
-  <Config Name="Host Port" Target="80" Default="8384" Mode="tcp" Description="HTTP Port: 80" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Host Port" Target="80" Default="80" Mode="tcp" Description="HTTP Port: 80" Type="Port" Display="always" Required="true" Mask="false">80</Config>
   <Config Name="Apps Path" Target="/var/www/html/apps" Default="/mnt/user/appdata/OwnCloud/apps" Mode="rw" Description="Installed Apps Folder" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Configuration Folder" Target="/var/www/html/config" Default="/mnt/user/appdata/OwnCloud/config" Mode="rw" Description="Configuration Folder" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Data Folder" Target="/var/www/html/data" Default="/mnt/user/OwnCloud" Mode="rw" Description="Data Folder" Type="Path" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="true" Mask="true"></Config>
-  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="true" Mask="true"></Config>  
+  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="true" Mask="false"></Config>  
 </Container>
