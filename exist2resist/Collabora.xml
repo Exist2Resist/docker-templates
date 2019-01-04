@@ -6,6 +6,10 @@
   <Overview>
 	Collabora Office Documents collaboration software server.[br]
         Meant to be used with NextCloud and OwnCloud.[br]
+	The settings below reflect those of both Collabora and Nextcloud sitting behind a reverse proxy with DDNS service[br]
+	For the Nginx conf file see here: https://www.collaboraoffice.com/code/nginx-reverse-proxy/
+	Other settings: https://www.collaboraoffice.com/code/
+	  
 	  
 	[span style=\'color: #E80000;\']Docker run Example:[br]
 	[/span]	
@@ -55,9 +59,9 @@
   <Config Type="Port" Name="TCP Port" Target="9980" Default="9980" Mode="tcp" Description="TCP communication port" Display="always" Required="true">9980</Config>
   <Config Type="Variable" Name="Prevent SSL cert" Target="DONT_GEN_SSL_CERT" Default="Y" Description="Leave blank to create certificate." Display="always" Required="false"></Config>
   <Config Type="Variable" Name="Extra Parameters" Target="extra_params" Default="--o:ssl.enable=false --o:ssl.termination=true" Description="Extra paremeters passed to /etc/loolwsds/loolwsd.xml" Display="always" Required="false"></Config>
-  <Config Type="Variable" Name="WOPI Host" Target="domain" Default="nextcloud.yourdomain.com" Description="WOPI Domain for your Collabora" Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="WOPI Host" Target="domain" Default="nextcloud.yourdomain.duckdns.org" Description="WOPI Domain for your Collabora" Display="always" Required="false"></Config>
   <Config Type="Variable" Name="Cert Domain" Target="cert_domain" Default="" Description="Will generate a domain cert instead for localhost." Display="always" Required="false"></Config>	  
-  <Config Type="Variable" Name="Server Name" Target="server_name" Default="collabora.yourdomain.com" Description="Server Name for your Collabora" Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="Server Name" Target="server_name" Default="collabora.yourdomain.duckdns.org" Description="Server Name for your Collabora" Display="always" Required="false"></Config>
   <Config Type="Variable" Name="Username" Target="username" Default="admin" Description="Username" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="Password" Target="password" Default="S3cRet" Description="Password" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="Dictionaries" Target="dictionaries" Default="en_CA en_GB en_US" Description="Language dictionaries space seperated." Display="always" Required="true"></Config>
