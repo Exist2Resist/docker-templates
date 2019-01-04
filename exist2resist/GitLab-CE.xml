@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
   <Name>GitLab CE</Name>
-  <Hostname></Hostname>
-  <Detach>true</Detach>
   <Beta>False</Beta>
   <Category>Software:Git collaboration software</Category>
   <Overview>
-    	gitlab/gitlab-ce[br][br]
 	    GitLab Community Edition is a software development collaboration tool.[br][br]
 	    This software let's you commit and pull changes from a shared repository.[br][br]
-	  After you setup the server, repository will be available at the address [br][br]
-	  [br][br]
-	  [br][br]
-	  Features:[br][br]
-	  * [br][br]
-	  * [br][br]
-	  * [br][br]
-	  * [br][br]
-	[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[br][br]
-	[/span]
-	Docker run Example:[br]
+	  
+	[span style=\'color: #E80000;\']Docker run Example:[br]
+	[/span]	
 	docker run --detach \
 	--hostname gitlab.example.com \
 	--publish 443:443 --publish 80:80 --publish 22:22 \
@@ -28,7 +17,11 @@
 	--volume /srv/gitlab/config:/etc/gitlab \
 	--volume /srv/gitlab/logs:/var/log/gitlab \
 	--volume /srv/gitlab/data:/var/opt/gitlab \
-	gitlab/gitlab-ce:latest
+	gitlab/gitlab-ce:latest[br]
+	  [br]
+	  docker exec -it gitlab /bin/bash[br][br]
+	  docker exec -it gitlab vi /etc/gitlab/gitlab.rb[br]
+	  -edit the above to set the [span style=\'color: #E54320;\']external_url[/span] to point to a valid URL.
   </Overview>
   <Registry>https://hub.docker.com/r/gitlab/gitlab-ce/</Registry>
   <GitHub>https://github.com/gitlabhq/gitlabhq</GitHub>
@@ -39,7 +32,7 @@
   <Network>bridge</Network>
   <WebUI>http://[IP]:[PORT:443]/</WebUI>
   <Icon>https://i.imgur.com/pv8yaRx.png</Icon>
-  <ExtraParams></ExtraParams>
+  <ExtraParams>--detach</ExtraParams>
   <Config Type="Path" Name="Config directory" Target="/etc/gitlab" Default="/mnt/user/appdata/gitlab/config" Mode="rw" Description="Host path to store Fdroid apk files." Display="always" Required="true"></Config>
   <Config Type="Path" Name="Log directory" Target="/var/log/gitlab" Default="/mnt/user/appdata/gitlab/logs" Mode="rw" Description="Host path to store Fdroid apk files." Display="always" Required="true"></Config>
   <Config Type="Path" Name="Data directory" Target="/var/opt/gitlab" Default="/mnt/user/appdata/gitlab/data" Mode="rw" Description="Host path to store Fdroid apk files." Display="always" Required="true"></Config>
