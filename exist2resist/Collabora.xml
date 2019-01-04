@@ -1,0 +1,2 @@
+$ docker run -t -d -p 127.0.0.1:9980:9980 -e "domain=<your-dot-escaped-domain>" \
+        -e "username=admin" -e "password=S3cRet" --restart always collabora/code
