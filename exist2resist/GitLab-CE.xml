@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
   <Name>GitLab CE</Name>
+  <Hostname></Hostname>
+  <Detach>true</Detach>
   <Beta>False</Beta>
   <Category>Software:Git collaboration software</Category>
   <Overview>
