@@ -28,7 +28,7 @@
 	  		pt_BR pt_PT ru. With the dictionaries environment variable you can change this list. 
 	  		The dictionaries environment variable should contain the space separated list of language codes 
 	  		(optionally followed by country code). In order to save resources, it makes sense to load only those dictionaries 
-	  		that are actually needed.
+	  		that are actually needed.[br]
 	[span style=\'color: #B820E5;\']
 	extra_params[/span][br]You can pass extra loolwsd command line parameter via this environment variable. For example, if you want 
 	  		to start loolwsd without SSL, when you test or develop, the syntax is: -e "extra_params=--o:ssl.enable=false". 
