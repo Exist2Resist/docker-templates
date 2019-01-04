@@ -5,8 +5,7 @@
   <Category>Software:Collaboration:Documents</Category>
   <Overview>
 	Collabora Office Documents collaboration software server.[br]
-	This software let's you create and collaborate with documents online.[br]
-        Compatible with NextCloud and OwnCloud.[br]
+        Meant to be used with NextCloud and OwnCloud.[br]
 	  
 	[span style=\'color: #E80000;\']Docker run Example:[br]
 	[/span]	
