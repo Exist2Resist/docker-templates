@@ -49,8 +49,8 @@
   <Config Type="Variable" Name="Prevent SSL cert" Target="DONT_GEN_SSL_CERT" Default="" Description="Leave blank to create certificate." Display="always" Required="falst"></Config>
   <Config Type="Variable" Name="Domain" Target="domain" Default="" Description="Domain for your Collabra" Display="always" Required="false"></Config>
   <Config Type="Variable" Name="Cert Domain" Target="cert_domain" Default="" Description="Will generate a domain cert instead for localhost." Display="always" Required="false"></Config>	  
-  <Config Type="Variable" Name="Server Name" Target="server_name" Default="" Description="Domain for your Collabora" Display="always" Required="false"></Config>
-  <Config Type="Variable" Name="Username" Target="username" Default="admin" Description="Domain for your Collabora" Display="always" Required="true"></Config>
-  <Config Type="Variable" Name="Password" Target="password" Default="S3cRet" Description="Domain for your Collabora" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="Server Name" Target="server_name" Default="" Description="Server Name for your Collabora" Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="Username" Target="username" Default="admin" Description="Username" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="Password" Target="password" Default="S3cRet" Description="Password" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="Dictionaries" Target="dictionaries" Default="en_CA en_GB en_US" Description="Language dictionaries space seperated." Display="always" Required="true"></Config>
 </Container>
