@@ -12,6 +12,13 @@
         $ docker run -t -d -p 127.0.0.1:9980:9980 -e "domain=your.dot.escaped.domain" \
         -e "username=admin" -e "password=S3cRet" --restart always collabora/code[br][br]
 	[span style=\'color: #B820E5;\']
+	your.dot.escaped.domain[/span][br]is the WOPI host, i.e. your preferred File Sync and Share solution that implements WOPI protocol,
+	  		for example share\\.example\\.com. You need double backslash in command line, because shell escapes the first, and 
+	  		the domain parameter takes a regular expression. Note: you can enable multiple domains by separating the domain names 
+	  		with | character.[br][br]
+			The optional username and password parameters enable the admin console feature of CODE. You can access the admin console at 
+	  		https://<CODE-domain>/loleaflet/dist/admin/admin.html.[br]
+	[span style=\'color: #B820E5;\']
 	DONT_GEN_SSL_CERT[/span][br]When this environment variable is set (is not “”), then 
 	  			startup script will not generate a new SSL certificate signed by
 	  			a dummy CA. It is useful, if you want to use your own SSL certificate for some reason.[br]
