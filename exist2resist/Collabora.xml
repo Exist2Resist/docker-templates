@@ -49,7 +49,7 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>bridge</Network>
-  <WebUI>https://[IP]:[PORT]/</WebUI>
+  <WebUI>https://[IP]:[PORT]/loleaflet/dist/admin/admin.html</WebUI>
   <Icon>https://i.imgur.com/tMCBVSE.png</Icon>
   <ExtraParams>-t -d</ExtraParams>
   <Config Type="Port" Name="TCP Port" Target="9980" Default="9980" Mode="tcp" Description="TCP communication port" Display="always" Required="true">9980</Config>
