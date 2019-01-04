@@ -10,7 +10,7 @@
 	[span style=\'color: #E80000;\']Docker run Example:[br]
 	[/span]	
         $ docker run -t -d -p 127.0.0.1:9980:9980 -e "domain=your.dot.escaped.domain" \
-        -e "username=admin" -e "password=S3cRet" --restart always collabora/code[br] 
+        -e "username=admin" -e "password=S3cRet" --restart always collabora/code[br][br] 
 	DONT_GEN_SSL_CERT[br]	When this environment variable is set (is not “”), then 
 	  			startup script will not generate a new SSL certificate signed by
 	  			a dummy CA. It is useful, if you want to use your own SSL certificate for some reason.[br]
