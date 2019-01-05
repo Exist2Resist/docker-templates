@@ -41,7 +41,7 @@
   <WebUI></WebUI>
   <Icon>http://i.imgur.com/nOIZcJ1.png?1</Icon>
   <ExtraParams></ExtraParams>
-  <Config Type="Path" Name="Config directory" Target="/var/lib/mysql" Mode="rw" Description="Host path to store MariaDB files for database persistance between upgrades." Display="always" Required="true"></Config>
+  <Config Type="Path" Name="Config directory" Target="/var/lib/mysql" Default"/mnt/user/appdata/mariadb" Mode="rw" Description="Host path to store MariaDB files for database persistance between upgrades." Display="always" Required="true"></Config>
   <Config Type="Port" Name="TCP Port" Target="3306" Default="3306" Mode="tcp" Description="TCP port 3306" Display="always" Required="false"></Config>
   <Config Type="Variable" Name="SQL root password" Target="MYSQL_ROOT_PASSWORD" Default="S0m3Secr3t!" Description="Root password" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="SQL Databse" Target="MYSQL_DATABASE" Default="" Description="Optional DB" Display="always" Required="false"></Config>
