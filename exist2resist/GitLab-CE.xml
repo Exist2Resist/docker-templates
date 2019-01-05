@@ -5,7 +5,9 @@
   <Category>Software:Git collaboration software</Category>
   <Overview>
 	    GitLab Community Edition is a software development collaboration tool.[br][br]
-	    This software let's you commit and pull changes from a shared repository.[br][br]
+	    This software let's you commit and pull changes from a shared repository.[br]
+	    First time this docker boots and you hit the login page, you will be asked to reset a passowrd.[br]
+	    Reset it, this is the login for the root account.[br][br]
 	  
 	[span style=\'color: #E80000;\']Docker run Example:[br]
 	[/span]	
