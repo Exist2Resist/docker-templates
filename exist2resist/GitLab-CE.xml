@@ -35,7 +35,7 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>bridge</Network>
-  <WebUI>https://[IP]:[PORT:84]/</WebUI>
+  <WebUI>http://[IP]:[PORT:84]/</WebUI>
   <Icon>https://i.imgur.com/pv8yaRx.png</Icon>
   <ExtraParams>--detach</ExtraParams>
   <Config Type="Path" Name="Config directory" Target="/etc/gitlab" Default="/mnt/user/appdata/gitlab/config" Mode="rw" Description="Host path to store gitlab config." Display="always" Required="true"></Config>
