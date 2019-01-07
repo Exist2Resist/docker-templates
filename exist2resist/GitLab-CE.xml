@@ -45,5 +45,5 @@
   <Config Type="Port" Name="SSH Port" Target="24" Default="24" Mode="tcp" Description="SSH port" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="Run with user ID" Target="APP_UID" Default="99" Description="Run application with specified user id." Mask="false" Display="advanced" Required="true">99</Config>
   <Config Type="Variable" Name="Run with group ID" Target="APP_GID" Default="100" Description="Run application with specified group id." Mask="false" Display="advanced" Required="true">100</Config>
-  <Config Type="Variable" Name="Omnibus Config" Target="GITLAB_OMNIBUS_CONFIG" Default="external_url 'https://some.subdomain.duckdns.com'; gitlab_rails['trusted_proxies']=['192.168.0.20']; gitlab_rails['gitlab_shell_ssh_port'] = 24; nginx['listen_port']=84; nginx['listen_https']=false;" Description="OMNIBUS replaces gitlab.rb settings." Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="Omnibus Config" Target="GITLAB_OMNIBUS_CONFIG" Default="gitlab_rails['trusted_proxies']=['192.168.0.20']; gitlab_rails['gitlab_shell_ssh_port'] = 24; nginx['listen_port']=84; nginx['listen_https']=false;" Description="OMNIBUS replaces gitlab.rb settings." Display="always" Required="false"></Config>
 </Container>
