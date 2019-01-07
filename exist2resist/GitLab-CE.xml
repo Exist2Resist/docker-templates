@@ -13,20 +13,22 @@
 	[/span]	
 	docker run --detach \
 	--hostname gitlab.example.com \
-	--publish 443:443 --publish 80:80 --publish 22:22 \
+	--publish 84:84 --publish 24:24 \
 	--name gitlab \
 	--restart always \
 	--volume /srv/gitlab/config:/etc/gitlab \
 	--volume /srv/gitlab/logs:/var/log/gitlab \
 	--volume /srv/gitlab/data:/var/opt/gitlab \
+	--env GITLAB_OMNIBUS_CONFIG="gitlab_rails['trusted_proxies']=['192.168.0.20']; \
+	gitlab_rails['gitlab_shell_ssh_port'] = 24; nginx['listen_port']=84; \
+	nginx['listen_https']=false;"
 	gitlab/gitlab-ce:latest[br]
 	  [br]
-	  docker exec -it gitlab /bin/bash[br][br]
-	  docker exec -it gitlab vi /etc/gitlab/gitlab.rb[br]
-	  -edit the above to set the [span style=\'color: #E54320;\']external_url[/span] to point to a valid URL.[br]
 	  gitlab.rb template:[br]
 	  https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/files/gitlab-config-template/gitlab.rb.template[br]
-	  Use the Omnibus Config variable to set custom parameters. 
+	  Use the Omnibus Config variable to set custom parameters as defined in the gitlab.rb template.
+	  
+	  Tested and working on https behind a reverse proxy. 
   </Overview>
   <Registry>https://hub.docker.com/r/gitlab/gitlab-ce/</Registry>
   <GitHub>https://github.com/gitlabhq/gitlabhq</GitHub>
