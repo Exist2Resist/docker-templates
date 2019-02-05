@@ -39,6 +39,6 @@
   <Config Type="Variable" Name="Device Code" Target="DEVICE_CODE" Default="taimen" Description="Android device Code" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="Run with user ID" Target="APP_UID" Default="99" Description="Run application with specified user id." Mask="false" Display="advanced" Required="true">99</Config>
   <Config Type="Variable" Name="Run with group ID" Target="APP_GID" Default="100" Description="Run application with specified group id." Mask="false" Display="advanced" Required="true">100</Config>
-  <Config Type="Variable" Name="HTTPS Cert Loaction" Target="HTTPS_CERTFILE" Description="Https certificate location." Mask="false" Display="advanced" Required="false"></Config>
-  <Config Type="Variable" Name="HTTPS Key Loaction" Target="HTTPS_KEYFILE" Description="Https keyfile loaction." Mask="false" Display="advanced" Required="false"></Config> 
+  <Config Type="Variable" Name="HTTPS Cert Loaction" Target="HTTPS_CERTFILE" Default="/srv/https.crt" Description="Https certificate location." Mask="false" Display="advanced" Required="false"></Config>
+  <Config Type="Variable" Name="HTTPS Key Loaction" Target="HTTPS_KEYFILE" Default="/srv/https.key" Description="Https keyfile loaction." Mask="false" Display="advanced" Required="false"></Config> 
 </Container>
