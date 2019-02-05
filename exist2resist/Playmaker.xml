@@ -34,11 +34,11 @@
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="Config directory" Target="/data/fdroid" Default="/mnt/user/appdata/fdroid" Mode="rw" Description="Host path to store Fdroid apk files." Display="always" Required="true"></Config>
   <Config Type="Port" Name="TCP Port" Target="5000" Default="5000" Mode="tcp" Description="TCP port 5000" Display="always" Required="true">5000</Config>
-  <Config Type="Variable" Name="HTTPS Cert Loaction" Target="HTTPS_CERTFILE" Display="always"></Config>
-  <Config Type="Variable" Name="HTTPS Key Loaction" Target="HTTPS_KEYFILE" Display="always"></Config>
-  <Config Type="Variable" Name="Language" Target="LANG_LOCALE" Default="ca_EN" Display="always" Required="true"></Config>
-  <Config Type="Variable" Name="Time Zone" Target="LANG_TIMEZONE" Default="America/Edmonton" Display="always" Required="true"></Config>
-  <Config Type="Variable" Name="Device Code" Target="DEVICE_CODE" Default="taimen" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="HTTPS Cert Loaction" Target="HTTPS_CERTFILE" Description="Https certificate location." Display="advanced"></Config>
+  <Config Type="Variable" Name="HTTPS Key Loaction" Target="HTTPS_KEYFILE" Description="Https keyfile loaction." Display="advanced"></Config>
+  <Config Type="Variable" Name="Language" Target="LANG_LOCALE" Default="ca_EN" Display="always" Description="Language and locale" Required="true"></Config>
+  <Config Type="Variable" Name="Time Zone" Target="LANG_TIMEZONE" Default="America/Edmonton" Description="Time zone" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="Device Code" Target="DEVICE_CODE" Default="taimen" Display="always" Description="Android device Code" Required="true"></Config>
   <Config Type="Variable" Name="Run with user ID" Target="APP_UID" Default="99" Description="Run application with specified user id." Mask="false" Display="advanced" Required="true">99</Config>
   <Config Type="Variable" Name="Run with group ID" Target="APP_GID" Default="100" Description="Run application with specified group id." Mask="false" Display="advanced" Required="true">100</Config>
 </Container>
