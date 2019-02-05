@@ -10,7 +10,7 @@
 	  After you setup the server, repository will be available at the address http(s)://localhost/fdroid.[br][br]
 	  You can start downloading apps from play store.[br][br]
 	  Server uses googleplay-api library, which is the python equivalent of the Java play-store-api library used by YalpStore.[br][br]
-	  See this URL for device codes: https://raw.githubusercontent.com/NoMore201/googleplay-api/master/gpapi/device.properties
+	  See this URL for device codes: https://raw.githubusercontent.com/NoMore201/googleplay-api/master/gpapi/device.properties[br]
 	  Features:[br][br]
 	  * Download apks from google play store to your collection. Update them or delete if they are not needed anymore.[br][br]
 	  * Manage the fdroid repository. You can update it manually, as you add/remove apks to your collection.[br][br]
