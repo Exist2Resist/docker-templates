@@ -10,6 +10,7 @@
 	  After you setup the server, repository will be available at the address http(s)://localhost/fdroid.[br][br]
 	  You can start downloading apps from play store.[br][br]
 	  Server uses googleplay-api library, which is the python equivalent of the Java play-store-api library used by YalpStore.[br][br]
+	  See this URL for device codes: https://raw.githubusercontent.com/NoMore201/googleplay-api/master/gpapi/device.properties
 	  Features:[br][br]
 	  * Download apks from google play store to your collection. Update them or delete if they are not needed anymore.[br][br]
 	  * Manage the fdroid repository. You can update it manually, as you add/remove apks to your collection.[br][br]
@@ -33,11 +34,11 @@
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="Config directory" Target="/data/fdroid" Default="/mnt/user/appdata/fdroid" Mode="rw" Description="Host path to store Fdroid apk files." Display="always" Required="true"></Config>
   <Config Type="Port" Name="TCP Port" Target="5000" Default="5000" Mode="tcp" Description="TCP port 5000" Display="always" Required="true">5000</Config>
-    -e HTTPS_CERTFILE="/srv/https.crt" \
-    -e HTTPS_KEYFILE="/srv/https.key" \
-    -e LANG_LOCALE="it_IT" \
-    -e LANG_TIMEZONE="Europe/Rome" \
-    -e DEVICE_CODE="hammerhead" \
+  <Config Type="Variable" Name="HTTPS Cert Loaction" Target="HTTPS_CERTFILE" Display="always"></Config>
+  <Config Type="Variable" Name="HTTPS Key Loaction" Target="HTTPS_KEYFILE" Display="always"></Config>
+  <Config Type="Variable" Name="Language" Target="LANG_LOCALE" Default="ca_EN" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="Time Zone" Target="LANG_TIMEZONE" Default="America/Edmonton" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="Device Code" Target="DEVICE_CODE" Default="taimen" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="Run with user ID" Target="APP_UID" Default="99" Description="Run application with specified user id." Mask="false" Display="advanced" Required="true">99</Config>
   <Config Type="Variable" Name="Run with group ID" Target="APP_GID" Default="100" Description="Run application with specified group id." Mask="false" Display="advanced" Required="true">100</Config>
 </Container>
