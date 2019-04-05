@@ -2,10 +2,36 @@
 <Container version="2">
   <Name>MariaDB</Name>
   <Beta>False</Beta>
-  <Category>Software:Tools:Database</Category>
+  <Category>Tools:Database</Category>
   <Overview>
+	[span style=\'color: #0046FF;\']library/mariadb:label[br]
+	Docker image for MariaDB[br][br]
+	[span style=\'color: #00FF23;\']
+	Add a :label tag to the Repository field[br]
+	Label options:[br]
+	10.3.0, 10.3 [br]
+	10.2.7, 10.2, 10, latest [br]
+	10.1.26, 10.1 [br]
+	10.0.32, 10.0 [br]
+	5.5.57, 5.5, 5[br][br]
+	[/span]
+	For example: [br]
+	library/mariadb:latest[br]
+	The above will pull the latest MariaDB version from the official docker, which at the time of writing is 10.2.7. [br][br]
+	library/mariadb:5.5 [br]
+	The above will pull the latest from the 5.5 branch[br][br]
+	If you do not add a label it will pull :latest version.[br][br]	
+	[span style=\'color: #E80000;\']WARNING: If you do not have a persisitent storage "Config Directory" value and you update your MariaDB docker the data will be wiped.[/span][br]
+	[/span]
+	Run Example:[br]
+	docker run --restart=always --net=bridge --name mariaDB -p 3306:3306 -v /user/appdata/mariadb:/var/lib/mysql -d mariadb:latest[br][br]
+	optional:[br]
+	-e MYSQL_ROOT_PASSWORD=some_password[br]
+	-e MYSQL_DATABASE=create_this_db[br]
+	-e MYSQL_USER=username   ... this user will be granted all permissions on the above DB[br]
+	-e MYSQL_PASSWORD=password  ... password for above user name[br]
   </Overview>
-  <Registry>https://hub.docker.com/_/mariadb</Registry>
+  <Registry>https://hub.docker.com/_/mariadb/</Registry>
   <GitHub>https://github.com/docker-library/mariadb</GitHub>
   <Repository>library/mariadb:latest</Repository>
   <Support>n/a</Support>
@@ -15,5 +41,10 @@
   <WebUI></WebUI>
   <Icon>http://i.imgur.com/nOIZcJ1.png</Icon>
   <ExtraParams></ExtraParams>
-  
+  <Config Type="Path" Name="Config directory" Target="/var/lib/mysql" Default"/mnt/user/appdata/mariadb" Mode="rw" Description="Host path to store MariaDB files for database persistance between upgrades." Display="always" Required="true"></Config>
+  <Config Type="Port" Name="TCP Port" Target="3306" Default="3306" Mode="tcp" Description="TCP port 3306" Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="SQL root password" Target="MYSQL_ROOT_PASSWORD" Default="S0m3Secr3t!" Description="Root password" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="SQL Databse" Target="MYSQL_DATABASE" Default="" Description="Optional DB" Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="SQL User ID" Target="MYSQL_USER" Default="" Description="Optional DB User ID" Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="SQL User Password" Target="MYSQL_PASSWORD" Default="" Description="DB User Password" Display="always" Required="false"></Config>
 </Container>
