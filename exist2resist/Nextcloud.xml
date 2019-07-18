@@ -16,10 +16,10 @@
 	docker run --restart=always --net=bridge --name mariaDB -p 3306:3306 -v /user/appdata/mariadb:/var/lib/mysql -d mariadb:latest[br][br]
 	optional:[br]
   </Overview>
-  <Registry>https://hub.docker.com/_/mariadb/</Registry>
-  <GitHub>https://github.com/docker-library/mariadb</GitHub>
-  <Repository>library/mariadb:latest</Repository>
-  <Support>n/a</Support>
+  <Registry>https://hub.docker.com/_/nextcloud</Registry>
+  <GitHub>https://github.com/nextcloud/docker</GitHub>
+  <Repository>library/nextcloud:latest</Repository>
+  <Support>https://github.com/nextcloud/docker/issues</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>bridge</Network>
