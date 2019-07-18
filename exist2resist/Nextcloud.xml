@@ -19,7 +19,7 @@
   <Registry>https://hub.docker.com/_/nextcloud</Registry>
   <GitHub>https://github.com/nextcloud/docker</GitHub>
   <Repository>library/nextcloud:latest</Repository>
-  <Support>https://github.com/nextcloud/docker/issues</Support>
+  <Support>https://forums.docker.com/</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>bridge</Network>
