@@ -20,6 +20,7 @@
 	[span style=\'color: #E80000;\']DO THIS BEFORE DEPLOYING THE TEMPLATE[br][br]
 	[/span]
 	create a /mnt/user/playmaker directory.[br]
+	then, chown -R 999:999 /mnt/user/playmaker[br]
 	unRAID Example:[br]
 	docker run -d --restart=always --net=bridge --name playmaker -p 5000:5000 -v /mnt/disks/DataDisk/data/fdroid:/data/fdroid -e PGID=100 -e PUID=99 nomore201/playmaker
   </Overview>
