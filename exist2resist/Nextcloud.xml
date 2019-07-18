@@ -1,1 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>Nextcloud</Name>
+  <Beta>False</Beta>
+  <Category>Tools:Productivity Cloud</Category>
+  <Overview>
+	[span style=\'color: #0046FF;\']library/mariadb:label[br]
+	Docker image for Nextcloud from official Docker Image.[br][br]
+	[span style=\'color: #00FF23;\']
+	Add a :label tag to the Repository field[br]
+	Label options:[br]
 
+	[span style=\'color: #E80000;\']WARNING: If you do not have a persisitent storage "Config Directory" value and you update your MariaDB docker the data will be wiped.[/span][br]
+	[/span]
+	Run Example:[br]
+	docker run --restart=always --net=bridge --name mariaDB -p 3306:3306 -v /user/appdata/mariadb:/var/lib/mysql -d mariadb:latest[br][br]
+	optional:[br]
+  </Overview>
+  <Registry>https://hub.docker.com/_/mariadb/</Registry>
+  <GitHub>https://github.com/docker-library/mariadb</GitHub>
+  <Repository>library/mariadb:latest</Repository>
+  <Support>n/a</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <WebUI></WebUI>
+  <Icon>https://i.imgur.com/JtZboVW.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Config Type="Path" Name="Config directory" Target="/var/lib/mysql" Default="/mnt/user/appdata/mariadb" Mode="rw" Description="Host path to store MariaDB files for database persistance between upgrades." Display="always" Required="true"></Config>
+  <Config Type="Port" Name="TCP Port" Target="3306" Default="3306" Mode="tcp" Description="TCP port 3306" Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="SQL root password" Target="MYSQL_ROOT_PASSWORD" Default="S0m3Secr3t!" Description="Root password" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="SQL Databse" Target="MYSQL_DATABASE" Default="" Description="Optional DB" Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="SQL User ID" Target="MYSQL_USER" Default="" Description="Optional DB User ID" Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="SQL User Password" Target="MYSQL_PASSWORD" Default="" Description="DB User Password" Display="always" Required="false"></Config>
+</Container>
