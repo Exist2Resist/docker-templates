@@ -5,17 +5,23 @@
   <Category>Tools:Productivity Cloud</Category>
   <Overview>
 	[span style=\'color: #0046FF;\']library/mariadb:label[br]
-	Docker image for Nextcloud from official Docker Image.[br][br]
+	Docker image for Nextcloud from official Docker Image.[br]
+	This image uses MYSQL/MariaDB for the back end.[br]
+	See Exist2Resist MariaDb docker to get that up and running.[br][br]
 	[span style=\'color: #00FF23;\']
 	Add a :label tag to the Repository field[br]
 	Label options:[br]
 	15, 16 or stable, 17 or latest[br]
-	ex. Repository: nextcloud:stable
-
+	ex. Repository: nextcloud:stable[br][br]	
+	Using the Nextcloud command-line interface[br]
+        To use the Nextcloud command-line interface (aka. occ command):[br]
+        $ docker exec --user www-data CONTAINER_ID php occ[br][br]
 	[span style=\'color: #E80000;\']WARNING: If you do not have a persisitent storage "Config Directory" value and you update your MariaDB docker the data will be wiped.[/span][br]
 	[/span]
 	Run Example:[br]
-	docker run --restart=always --net=bridge --name mariaDB -p 3306:3306 -v /user/appdata/mariadb:/var/lib/mysql -d mariadb:latest[br][br]
+	docker run --restart=always --net=bridge --name Nextcloud -p 443:443 -v /mnt/user/appdata/nextcloud/:/var/www/html/config \[br]
+	-d nextcloud:16 \[br]
+	[br][br]
 	optional:[br]
   </Overview>
   <Registry>https://hub.docker.com/_/nextcloud</Registry>
