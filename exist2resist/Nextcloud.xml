@@ -20,7 +20,7 @@
   </Overview>
   <Registry>https://hub.docker.com/_/nextcloud</Registry>
   <GitHub>https://github.com/nextcloud/docker</GitHub>
-  <Repository>nextcloud:stable</Repository>
+  <Repository>nextcloud:16</Repository>
   <Support>https://nextcloud.com/support/</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
@@ -28,7 +28,8 @@
   <WebUI>https://[IP]:[port]</WebUI>
   <Icon>https://i.imgur.com/JtZboVW.png</Icon>
   <ExtraParams></ExtraParams>
-  <Config Type="Path" Name="Config directory" Target="/var/lib/mysql" Default="/mnt/user/appdata/nextcloud" Mode="rw" Description="Host path to store MariaDB files for database persistance between upgrades." Display="always" Required="true"></Config>
+  <Config Type="Path" Name="Config directory" Target="/var/www/html/config" Default="/mnt/user/appdata/nextcloud/" Mode="rw" Description="Host path to store Configuration files for persistance between upgrades." Display="always" Required="true"></Config>
+  <Config Type="Path" Name="Data directory" Target="/var/www/html/data" Default="/mnt/user/Nextcloud/" Mode="rw" Description="Host path to store user data files for persistance between upgrades." Display="always" Required="true"></Config>
   <Config Type="Port" Name="TCP Port" Target="443" Default="443" Mode="tcp" Description="HTTPS port" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="SQL root password" Target="MYSQL_ROOT_PASSWORD" Default="S0m3Secr3t!" Description="Root password" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="SQL Databse" Target="MYSQL_DATABASE" Default="" Description="Optional DB" Display="always" Required="false"></Config>
