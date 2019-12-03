@@ -17,7 +17,7 @@
                              -v /*additional_location*:/mnt \
                              -e TZ=America/Edmonton \
 			     -p 8081:8081 \
-                             --name=SABnzbdH hurricane/docker-sabnzbdbr[br][br]
+                             --name=SABnzbdH hurricane/docker-sabnzbd[br][br]
   </Overview>
   <Registry>https://hub.docker.com/r/hurricane/sabnzbd</Registry>
   <GitHub>https://github.com/hurricanehrndz/docker-sabnzbd</GitHub>
