@@ -28,7 +28,7 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>bridge</Network>
-  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <WebUI>http://[IP]:[PORT:8081]/</WebUI>
   <Icon>https://i.imgur.com/5CqGH51.png</Icon>
   <ExtraParams>-v /sys/fs/cgroup:/sys/fs/cgroup:ro</ExtraParams>
   <Config Type="Path" Name="Config directory" Target="/config" Default="/mnt/user/appdata/SAB" Mode="rw" Description="Host path to store SABnzbd configuration files." Display="always" Required="true"></Config>
