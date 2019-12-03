@@ -16,7 +16,7 @@
 	docker run -d --net=bridge -v /*your_config__location*:/config \
                              -v /*additional_location*:/mnt \
                              -e TZ=America/Edmonton \
-			                       -p 8081:8081 \
+			     -p 8081:8081 \
                              --name=SABnzbdH hurricane/docker-sabnzbdbr][br][br]
   </Overview>
   <Registry>https://hub.docker.com/r/hurricane/sabnzbd</Registry>
