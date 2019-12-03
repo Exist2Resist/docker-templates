@@ -29,7 +29,7 @@
   <WebUI>https://[IP]:[PORT]</WebUI>
   <Icon>https://i.imgur.com/5CqGH51.png</Icon>
   <ExtraParams></ExtraParams>
-  <Config Type="Path" Name="Config directory" Target="/config" Default="/mnt/user/appdata/SAB" Mode="rw" Description="Host path to store SABnzbd configuration files." Display="always" Required="true"></Config>
+  <Config Type="Path" Name="Config directory" Target="/config" Default="/mnt/user/appdata/SABnzbd" Mode="rw" Description="Host path to store SABnzbd configuration files." Display="always" Required="true"></Config>
   <Config Type="Path" Name="Mount directory" Target="/mnt" Default="/mnt" Mode="rw" Description="Host path to folders/meida ." Display="always" Required="true"></Config>
   <Config Type="Port" Name="TCP Port" Target="8081" Default="8081" Mode="tcp" Description="Web UI port 8080" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="Time Zone" Target="TZ" Default="" Description="Container Time Zone" Display="always" Required="false"></Config>
