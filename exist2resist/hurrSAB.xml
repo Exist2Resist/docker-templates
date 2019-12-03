@@ -1,1 +1,38 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>SABnzbdH</Name>
+  <Beta>False</Beta>
+  <Category>Tools:Downloads</Category>
+  <Overview>
+	[span style=\'color: #0046FF;\']library/mariadb:label[br]
+	Docker image for Hurricanes SABnzbd[br][br]
+	[span style=\'color: #00FF23;\']
+	Add a :label tag to the Repository field[br][br]
+	[/span]
+	For example: [br]
+	hurricane/sabnzbd:latest[br]		
+	If you do not add a label it will pull :latest version.[br][br]	
+	Run Example:[br]
+	docker run -d --net=bridge -v /*your_config__location*:/config \
+                             -v /*additional_location*:/mnt \
+                             -e TZ=America/Edmonton \
+			                       -p 8081:8081 \
+                             --name=SABnzbdH hurricane/docker-sabnzbdbr][br][br]
+  </Overview>
+  <Registry>https://hub.docker.com/r/hurricane/sabnzbd</Registry>
+  <GitHub>https://github.com/hurricanehrndz/docker-sabnzbd</GitHub>
+  <Repository>hurricane/sabnzbd:latest</Repository>
+  <Support>https://github.com/hurricanehrndz/docker-sabnzbd/issues</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <WebUI>https://[IP]:[PORT]</WebUI>
+  <Icon>https://i.imgur.com/5CqGH51.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Config Type="Path" Name="Config directory" Target="/config" Default="/mnt/user/appdata/SAB" Mode="rw" Description="Host path to store SABnzbd configuration files." Display="always" Required="true"></Config>
+  <Config Type="Path" Name="Mount directory" Target="/mnt" Default="/mnt" Mode="rw" Description="Host path to folders/meida ." Display="always" Required="true"></Config>
+  <Config Type="Port" Name="TCP Port" Target="8081" Default="8081" Mode="tcp" Description="Web UI port 8080" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="Time Zone" Target="TZ" Default="" Description="Container Time Zone" Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="User ID" Target="SB_USER_ID" Default="" Description="User ID the container will be run with." Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="Group ID" Target="SB_GROUP_ID" Default="" Description="Group ID the container will be run with." Display="always" Required="false"></Config>
+</Container>
