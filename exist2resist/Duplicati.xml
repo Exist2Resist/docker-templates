@@ -4,10 +4,15 @@
   <Beta>False</Beta>
   <Category>Software:Backup</Category>
   <Overview>
+    Duplicati is a free, open source, backup client that securely stores encrypted, incremental, compressed backups on cloud storage services and remote file servers. It works with:
+
+    Amazon S3, OneDrive, Google Drive, Rackspace Cloud Files, HubiC, Backblaze (B2), Swift / OpenStack, WebDAV, SSH (SFTP), FTP, and more!
+
+    Duplicati is licensed under LGPL and available for Windows, OSX and Linux (.NET 4.6.2+ or Mono 4.8.0+ required).
   </Overview>
   <Registry>https://hub.docker.com/r/duplicati/duplicati</Registry>
   <GitHub>https://github.com/duplicati/duplicati/tree/master/Installer/Docker</GitHub>
-  <Repository>duplicati/duplicati</Repository>
+  <Repository>duplicati/duplicati:canary</Repository>
   <Support>n/a</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
@@ -17,5 +22,5 @@
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="Persistance directory." Target="/data" Default="/mnt/user/appdata/duplicati" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
   <Config Type="Path" Name="Backup directory." Target="/mnt" Default="/mnt" Mode="rw" Description="Host path" Display="always" Required="false"></Config>
-  <Config Type="Port" Name="" Target="8200" Default="8200" Mode="tcp" Description="TCP port 8200" Display="always" Required="true"></Config>
+  <Config Type="Port" Name="Web Port" Target="8200" Default="8200" Mode="tcp" Description="TCP port 8200" Display="always" Required="true"></Config>
 </Container>
