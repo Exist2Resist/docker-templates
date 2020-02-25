@@ -15,8 +15,8 @@
   <WebUI>http://[IP]:[PORT]</WebUI>
   <Icon>https://i.imgur.com/MIM4w7T.png</Icon>
   <ExtraParams></ExtraParams>
-  <Config Type="Path" Name="Persistance directory." Target="/data" Default"/mnt/user/appdata/duplicati" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
-  <Config Type="Path" Name="Backup directory." Target="/mnt" Default"/mnt" Mode="rw" Description="Host path" Display="always" Required="false"></Config>
+  <Config Type="Path" Name="Persistance directory." Target="/data" Default="/mnt/user/appdata/duplicati" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
+  <Config Type="Path" Name="Backup directory." Target="/mnt" Default="/mnt" Mode="rw" Description="Host path" Display="always" Required="false"></Config>
   <Config Type="Port" Name="" Target="8200" Default="8200" Mode="tcp" Description="TCP port 8200" Display="always" Required="true"></Config>
   </Config>
 </Container>
