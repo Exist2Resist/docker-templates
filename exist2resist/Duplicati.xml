@@ -24,5 +24,5 @@ Duplicati is licensed under LGPL and available for Windows, OSX and Linux (.NET 
   <Config Type="Path" Name="Backup directory." Target="/mnt" Default="/mnt" Mode="rw" Description="Host path" Display="always" Required="false"></Config>
   <Config Type="Port" Name="Web Port" Target="8200" Default="8200" Mode="tcp" Description="TCP port 8200" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="User ID" Target="PUID" Default="99" Description="User ID the container will be run with." Display="always" Required="false"></Config>
-  <Config Type="Variable" Name="Group ID" Target="GUID" Default="100" Description="Group ID the container will be run with." Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="Group ID" Target="PGID" Default="100" Description="Group ID the container will be run with." Display="always" Required="false"></Config>
 </Container>
