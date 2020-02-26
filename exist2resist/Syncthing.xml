@@ -32,7 +32,7 @@
   <Config Name="Host Port 3" Target="22000" Default="22000" Mode="tcp" Description="Container Port: 22000" Type="Port" Display="always" Required="true" Mask="false">22000</Config>
   <Config Name="AppData Config Path" Target="/var/syncthing/config" Default="/mnt/user/appdata/syncthing" Mode="rw" Description="Configuration Folder" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Sync Folder Path" Target="/var/syncthing" Default="/mnt/user/appdata/sync" Mode="rw" Description="Syncronization Folder" Type="Path" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Key 1" Target="PUID" Default="1000" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Key 2" Target="PGID" Default="1000" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   
 </Container>
