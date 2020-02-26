@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>Duplicati</Name>
   <Beta>False</Beta>
-  <Category>Software:Backup</Category>
+  <Category>Backup</Category>
   <Overview>
 Duplicati is a free, open source, backup client that securely stores encrypted, incremental, compressed backups on cloud storage services and remote file servers. It works with:
 
