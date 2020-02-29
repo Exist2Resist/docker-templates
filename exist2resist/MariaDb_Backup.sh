@@ -41,8 +41,8 @@
  docker exec $CONTAINER sh -c "$SQL_DUMP_COMMAND"
  
  #Variables, SRC is source of sql dumps, DEST is where they will be copied to, DAYS is how long the backups will be kept for.
- SRC="/mnt/disks/DataDisk/data/MariaDB/sqlbackup/*.sql"
- DEST="/mnt/disks/DataDisk/backups/mariadb/"
+ SRC="/mnt/user/appdata/MariaDB/sqlbackup/*.sql"
+ DEST="/mnt/user/backups/mariadb/"
  DAYS=14
  
  #Move SQL dumps
