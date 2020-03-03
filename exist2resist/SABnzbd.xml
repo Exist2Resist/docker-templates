@@ -4,15 +4,9 @@
   <Beta>False</Beta>
   <Category>Tools:Downloads</Category>
   <Overview>
-	[span style=\'color: #0046FF;\']library/mariadb:label[br]
+
 	Docker image for SABnzbd[br][br]
-	[span style=\'color: #00FF23;\']
-	Add a :label tag to the Repository field[br]
-	Label options:[br]
-	latest, centos7[br][br]
-	[/span]
-	For example: [br]
-	exist2resist/sabnzbd:latest[br]		
+	exist2resist/sabnzbd		
 	If you do not add a label it will pull :latest version.[br][br]	
 	Run Example:[br]
 	docker run --restart=always --net=bridge --name sabnzbd -p 8080:8080 -v /hostdir:/config -v /hostdir:/mnt -d sabnzbd:latest[br][br]
@@ -23,7 +17,7 @@
   </Overview>
   <Registry>https://hub.docker.com/r/exist2resist/sabnzbd</Registry>
   <GitHub>https://github.com/Exist2Resist/sabnzbd-docker</GitHub>
-  <Repository>exist2resist/sabnzbd:latest</Repository>
+  <Repository>exist2resist/sabnzbd</Repository>
   <Support>https://github.com/Exist2Resist/sabnzbd-docker/issues</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
