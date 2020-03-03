@@ -11,7 +11,7 @@
 	docker run --restart=always --net=bridge --name sabnzbd -p 8080:8080 -v /hostdir:/config -v /hostdir:/mnt -d exist2resist/sabnzbd[br][br]
 	optional:[br]
 	-e PUID=User ID (99 is defualt)[br]
-	-e GUID=Group ID (100 id default)[br]
+	-e PGID=Group ID (100 id default)[br]
 	-e TMZN=Time Zone (America/Edmonton id default)[br]
   </Overview>
   <Registry>https://hub.docker.com/r/exist2resist/sabnzbd</Registry>
@@ -29,5 +29,5 @@
   <Config Type="Port" Name="TCP Port" Target="8080" Default="8080" Mode="tcp" Description="Web UI port 8080" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="Time Zone" Target="TMZN" Default="America/Edmonton" Description="Container Time Zone" Display="always" Required="false"></Config>
   <Config Type="Variable" Name="User ID" Target="PUID" Default="99" Description="User ID the container will be run with." Display="always" Required="false"></Config>
-  <Config Type="Variable" Name="Group ID" Target="GUID" Default="100" Description="Group ID the container will be run with." Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="Group ID" Target="PGID" Default="100" Description="Group ID the container will be run with." Display="always" Required="false"></Config>
 </Container>
