@@ -10,7 +10,7 @@
 # In Unraid use user scripts to schedule this script otherwise
 # use cron to schedule this script to run as frequently as you want.
 #
-# To restore database drop the database first then run
+# To restore database run
 # docker exec -it MariaDB sh -c "mysql -u root -p'somepassword' MyVideos116 < /var/lib/mysql/sqlbackup/backupfilename.sql"
 ###################################################################################
  
