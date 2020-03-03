@@ -37,7 +37,7 @@
  SQL_DUMP_COMMAND="mysqldump -u $USERNAME  -p'$PASSWORD' $DATABASE > $DESTINATION$BACKUPNAME"
  
  #Remove the '-it' switch from the below otherwise you will get an ERROR “The input device is not a TTY”.
- #docker exec -it $CONTAINER sh -c "$SQL_DUMP_COMMAND"
+ #this "docker exec -it $CONTAINER sh -c "$SQL_DUMP_COMMAND"" does not work as a cron job.
  docker exec $CONTAINER sh -c "$SQL_DUMP_COMMAND"
  
  #Variables, SRC is source of sql dumps, DEST is where they will be copied to, DAYS is how long the backups will be kept for.
@@ -53,3 +53,7 @@
  
  #Command to delte old backups.
  nice find . -mtime +$DAYS -exec rm {} \;
+ 
+ #Change Ownership and Permissions of files after move and delete.
+ chown nobody:users -R $DEST 
+ chmod 755 -R $DEST
