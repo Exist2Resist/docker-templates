@@ -17,10 +17,10 @@
  #Docker container name, case sensitive
  CONTAINER="MariaDB"
  
- #Username
+ #DB Username
  USERNAME="root"
  
- #Password
+ #DB Password
  PASSWORD="somepassword"
  
  #Database name use --all-databases to backup the entire server
