@@ -4,12 +4,11 @@
   <Beta>False</Beta>
   <Category>Tools:Downloads</Category>
   <Overview>
-
 	Docker image for SABnzbd[br][br]
 	exist2resist/sabnzbd		
 	If you do not add a label it will pull :latest version.[br][br]	
 	Run Example:[br]
-	docker run --restart=always --net=bridge --name sabnzbd -p 8080:8080 -v /hostdir:/config -v /hostdir:/mnt -d sabnzbd:latest[br][br]
+	docker run --restart=always --net=bridge --name sabnzbd -p 8080:8080 -v /hostdir:/config -v /hostdir:/mnt -d exist2resist/sabnzbd[br][br]
 	optional:[br]
 	-e PUID=User ID (99 is defualt)[br]
 	-e GUID=Group ID (100 id default)[br]
