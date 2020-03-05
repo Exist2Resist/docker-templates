@@ -45,7 +45,4 @@
   <Config Type="Variable" Name="DNS server 2" Target="DNS2" Default="1.1.1.1" Description="DNS sever" Display="always" Required="false"></Config>		
   <Config Type="Variable" Name="DNS server 3" Target="DNS3" Default="8.8.8.8" Description="DNS sever 2" Display="always" Required="false"></Config>		
   <Config Type="Variable" Name="DNS server 4" Target="DNS4" Default="208.67.222.222" Description="DNS sever 3" Display="always" Required="false"></Config>		
-  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  
 </Container>
