@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
-  <Name></Name>
-  <Beta></Beta>
+  <Name>Subsonic</Name>
+  <Beta>false</Beta>
   <Category>MediaServer:Video, MediaServer:Music</Category>
   <Overview>
   </Overview>
