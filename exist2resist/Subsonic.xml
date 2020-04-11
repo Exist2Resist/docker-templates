@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name></Name>
+  <Beta></Beta>
+  <Category>MediaServer:Video, MediaServer:Music</Category>
+  <Overview>
+  </Overview>
+  <Registry>https://hub.docker.com/r/exist2resist/subsonic</Registry>
+  <GitHub>https://github.com/Exist2Resist/subsonic-docker</GitHub>
+  <Repository>exist2resist/subsonic</Repository>
+  <Support>https://github.com/Exist2Resist/subsonic-docker/issues</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <WebUI>https://[IP]:[PORT]</WebUI>
+  <Icon>https://i.imgur.com/QNAuf3G.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Config Type="Path" Name="" Target="/usr/somedir" Default="/mnt/user/appdata/somedir" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
+  <Config Type="Port" Name="" Target="80" Default="80" Mode="tcp" Description="TCP port 80" Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="" Target="" Default="" Description="" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="User ID" Target="PUID" Default="99" Description="User ID the container will be run with." Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="Group ID" Target="PGID" Default="100" Description="Group ID the container will be run with." Display="always" Required="false"></Config>
+</Container>
