@@ -17,8 +17,8 @@
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="" Target="/subsonic" Default="/mnt/user/appdata/subsonic" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
   <Config Type="Path" Name="" Target="/music" Default="/mnt/user/music" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
-  <Config Type="Path" Name="" Target="/podcasts" Default="/mnt/user/podcasts" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
-  <Config Type="Path" Name="" Target="/playlists" Default="/mnt/user/playlists" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
+  <Config Type="Path" Name="" Target="/podcasts" Default="" Mode="rw" Description="Host path" Display="always" Required="false"></Config>
+  <Config Type="Path" Name="" Target="/playlists" Default="" Mode="rw" Description="Host path" Display="always" Required="false"></Config>
   <Config Type="Port" Name="" Target="4040" Default="4040" Mode="tcp" Description="TCP port 4040" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="Time Zone" Target="TZ" Default="America/Edmonton" Description="" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="User ID" Target="PUID" Default="99" Description="User ID the container will be run with." Display="always" Required="true"></Config>
