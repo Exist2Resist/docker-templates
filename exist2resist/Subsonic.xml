@@ -15,9 +15,12 @@
   <WebUI>https://[IP]:[PORT]</WebUI>
   <Icon>https://i.imgur.com/QNAuf3G.png</Icon>
   <ExtraParams></ExtraParams>
-  <Config Type="Path" Name="" Target="/usr/somedir" Default="/mnt/user/appdata/somedir" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
-  <Config Type="Port" Name="" Target="80" Default="80" Mode="tcp" Description="TCP port 80" Display="always" Required="false"></Config>
-  <Config Type="Variable" Name="" Target="" Default="" Description="" Display="always" Required="true"></Config>
-  <Config Type="Variable" Name="User ID" Target="PUID" Default="99" Description="User ID the container will be run with." Display="always" Required="false"></Config>
-  <Config Type="Variable" Name="Group ID" Target="PGID" Default="100" Description="Group ID the container will be run with." Display="always" Required="false"></Config>
+  <Config Type="Path" Name="" Target="/subsonic" Default="/mnt/user/appdata/subsonic" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
+  <Config Type="Path" Name="" Target="/music" Default="/mnt/user/music" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
+  <Config Type="Path" Name="" Target="/podcasts" Default="/mnt/user/podcasts" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
+  <Config Type="Path" Name="" Target="/playlists" Default="/mnt/user/playlists" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
+  <Config Type="Port" Name="" Target="4040" Default="4040" Mode="tcp" Description="TCP port 4040" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="Time Zone" Target="TZ" Default="America/Edmonton" Description="" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="User ID" Target="PUID" Default="99" Description="User ID the container will be run with." Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="Group ID" Target="PGID" Default="100" Description="Group ID the container will be run with." Display="always" Required="true"></Config>
 </Container>
