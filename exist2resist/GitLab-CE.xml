@@ -28,7 +28,11 @@
 	  https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/files/gitlab-config-template/gitlab.rb.template[br]
 	  Use the Omnibus Config variable to set custom parameters as defined in the gitlab.rb template.
 	  
-	  Tested and working on https behind a reverse proxy. 
+	  Tested and working on https behind a reverse nginx proxy using http.
+	  Note the ExtraParams and the hostname parameter. 
+	  This is needed for th ereverse proxy, use your domain name here instead of external url https://...
+	  as the external url can not be set if you are not using https. 
+	  When no external url is set, the project clone urls are created with the hostnamne of the container. 
   </Overview>
   <Registry>https://hub.docker.com/r/gitlab/gitlab-ce/</Registry>
   <GitHub>https://github.com/gitlabhq/gitlabhq</GitHub>
