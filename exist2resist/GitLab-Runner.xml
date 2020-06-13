@@ -4,10 +4,15 @@
   <Beta></Beta>
   <Category>Software: Development</Category>
   <Overview>
+    Example run command:
     docker run -d --name gitlab-runner --restart always \
      -v /srv/gitlab-runner/config:/etc/gitlab-runner \
      -v /var/run/docker.sock:/var/run/docker.sock \
      gitlab/gitlab-runner:latest
+    
+    Create the container then stop it. 
+    Then in bash run the following command to register the runner.
+    docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register
   </Overview>
   <Registry>https://hub.docker.com/r/gitlab/gitlab-runner/</Registry>
   <GitHub>https://github.com/</GitHub>
