@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>GitLab Runner</Name>
+  <Beta></Beta>
+  <Category>Software: Development</Category>
+  <Overview>
+    docker run -d --name gitlab-runner --restart always \
+     -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+     -v /var/run/docker.sock:/var/run/docker.sock \
+     gitlab/gitlab-runner:latest
+  </Overview>
+  <Registry>https://hub.docker.com/r/gitlab/gitlab-runner/</Registry>
+  <GitHub>https://github.com/</GitHub>
+  <Repository>gitlab/gitlab-runner</Repository>
+  <Support>https://about.gitlab.com/getting-help/</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <WebUI></WebUI>
+  <Icon></Icon>
+  <ExtraParams></ExtraParams>
+  <Config Type="Path" Name="docker.sock" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="docker.sock location" Display="always" Required="true"></Config>
+  <Config Type="Path" Name="Config Dir" Target="/usr/somedir" Default="/mnt/user/appdata/gitlab-runner" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="User ID" Target="PUID" Default="99" Description="User ID the container will be run with." Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="Group ID" Target="PGID" Default="100" Description="Group ID the container will be run with." Display="always" Required="false"></Config>
+</Container>
