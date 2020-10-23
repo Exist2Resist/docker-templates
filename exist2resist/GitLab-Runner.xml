@@ -29,7 +29,7 @@
   <Network>bridge</Network>
   <WebUI></WebUI>
   <Icon>https://i.imgur.com/pv8yaRx.png</Icon>
-  <ExtraParams></ExtraParams>
+  <ExtraParams>--hostname GitLab-Runner-001</ExtraParams>
   <Config Type="Path" Name="docker.sock" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="docker.sock location" Display="always" Required="true"></Config>
   <Config Type="Path" Name="Config Dir" Target="/usr/somedir" Default="/mnt/user/appdata/gitlab-runner" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="User ID" Target="PUID" Default="99" Description="User ID the container will be run with." Display="always" Required="false"></Config>
