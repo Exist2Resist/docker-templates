@@ -13,6 +13,12 @@
     Create the container then stop it. 
     Then in bash run the following command to register the runner.
     docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register
+    
+    or 
+    
+    docker exec -it {runner-name} gitlab-runner register -n --url http://{gitlab-ip}:9090 \
+    --registration-token {registration-token} --clone-url http://{gitlab-ip}:9090 --executor docker \
+    --docker-image "docker:latest" --docker-privileged
   </Overview>
   <Registry>https://hub.docker.com/r/gitlab/gitlab-runner/</Registry>
   <GitHub>https://github.com/</GitHub>
