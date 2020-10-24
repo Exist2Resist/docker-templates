@@ -21,6 +21,12 @@
     {gitlab-url} is the IP or URL of the GitLab-CE instance
     {registration-token} is the registration token in GitLab-CE
     
+    UID that the container is being run with, in this case 99 which is nobody needs to be added to the docker group. 
+    In bash run this command: usermod -a -G docker nobody
+    This will add the user nobody to the docker group so that you access the docker.sock
+    
+    Otherwise run the container as docker user ID.
+    
   </Overview>
   <Registry>https://hub.docker.com/r/gitlab/gitlab-runner/</Registry>
   <GitHub>https://github.com/</GitHub>
