@@ -14,12 +14,12 @@
     
     docker exec -it {runner-name} gitlab-runner register -n --url http://{gitlab-ip}:84 \
     --registration-token {registration-token} --clone-url http://{gitlab-ip}:84 --executor docker \
-    --docker-image "docker:latest" --docker-privileged
+    --docker-image "docker:latest" --docker-privileged --locked=false
     
     Where:
-    {runner-name} woudl be GitLab-Runner or the container name
-    {gitlab-ip} is can be obtained by running 'docker network inspect bridge'
-    {registration-token} is the token in GitLab-CE
+    {runner-name} would be GitLab-Runner or the container name
+    {gitlab-url} is the IP or URL of the GitLab-CE instance
+    {registration-token} is the registration token in GitLab-CE
     
   </Overview>
   <Registry>https://hub.docker.com/r/gitlab/gitlab-runner/</Registry>
