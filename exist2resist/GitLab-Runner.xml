@@ -12,8 +12,8 @@
     
     After container creation rung the following:
     
-    docker exec -it {runner-name} gitlab-runner register -n --url http://{gitlab-ip}:84 \
-    --registration-token {registration-token} --clone-url http://{gitlab-ip}:84 --executor docker \
+    docker exec -it {runner-name} gitlab-runner register -n --url http://{gitlab-url}:84 \
+    --registration-token {registration-token} --clone-url http://{gitlab-url}:84 --executor docker \
     --docker-image "docker:latest" --docker-privileged --locked=false
     
     Where:
@@ -25,7 +25,7 @@
     In bash run this command: usermod -a -G docker nobody
     This will add the user nobody to the docker group so that you access the docker.sock
     
-    Otherwise run the container as docker user ID.
+    Alternatively run the container as docker user ID.
     
   </Overview>
   <Registry>https://hub.docker.com/r/gitlab/gitlab-runner/</Registry>
