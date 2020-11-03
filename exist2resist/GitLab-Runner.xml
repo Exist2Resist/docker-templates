@@ -27,6 +27,13 @@
     
     Alternatively run the container as docker user ID.
     
+    --locked=false will make the runner a shared runner
+    
+    Example:
+    docker exec -it runner gitlab-runner register --non-interactive --url https://git.mydomain.duckdns.org \
+    --registration-token xnLyPghgteTDyiJsT4 --name runner --tag-list "docker-latest-dind" \
+    --executor docker --docker-image "docker:latest" --docker-privileged --locked=false
+    
   </Overview>
   <Registry>https://hub.docker.com/r/gitlab/gitlab-runner/</Registry>
   <GitHub>https://github.com/</GitHub>
