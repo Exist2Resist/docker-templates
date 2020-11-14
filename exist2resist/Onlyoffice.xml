@@ -14,6 +14,8 @@
     - Collaborative editing
     - Hieroglyph support
 Support for all the popular formats: DOC, DOCX, TXT, ODT, RTF, ODP, EPUB, ODS, XLS, XLSX, CSV, PPTX, HTML
+    
+    You can specify port 80 for http or port 443 for https.
   </Overview>
   <Registry>https://registry.hub.docker.com/r/onlyoffice/documentserver</Registry>
   <GitHub>https://github.com/</GitHub>
@@ -27,7 +29,9 @@ Support for all the popular formats: DOC, DOCX, TXT, ODT, RTF, ODP, EPUB, ODS, X
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="Data Dir" Target="/var/www/onlyoffice/Data" Default="/mnt/user/appdata/onlyoffice/data" Mode="rw" Description="Data path" Display="always" Required="true"></Config>
   <Config Type="Path" Name="Logs Dir" Target="/var/log/onlyoffice" Default="/mnt/user/appdata/onlyoffice/logs" Mode="rw" Description="Logs path" Display="always" Required="false"></Config>  
-  <Config Type="Port" Name="" Target="80" Default="80" Mode="tcp" Description="TCP http port 80" Display="always" Required="true"></Config>
+  <Config Type="Path" Name="Lib Dir" Target="/var/lib/onlyoffice" Default="" Mode="rw" Description="Lib path" Display="always" Required="false"></Config>  
+  <Config Type="Path" Name="DB Dir" Target="/var/lib/postgresql" Default="" Mode="rw" Description="DB path" Display="always" Required="false"></Config>  
+  <Config Type="Port" Name="HTTP/s port" Target="443" Default="448" Mode="tcp" Description="TCP http port 80 or https port 443" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="User ID" Target="PUID" Default="99" Description="User ID the container will be run with." Display="always" Required="false"></Config>
   <Config Type="Variable" Name="Group ID" Target="PGID" Default="100" Description="Group ID the container will be run with." Display="always" Required="false"></Config>
 </Container>
