@@ -4,6 +4,16 @@
   <Beta></Beta>
   <Category></Category>
   <Overview>
+    ONLYOFFICE Docs is an online office suite comprising viewers and editors for texts, spreadsheets and presentations, fully compatible with Office Open XML formats: .docx, .xlsx, .pptx and enabling collaborative editing in real time.
+    
+    Functionality
+    - Document Editor
+    - Spreadsheet Editor
+    - Presentation Editor
+    - Mobile web viewers
+    - Collaborative editing
+    - Hieroglyph support
+Support for all the popular formats: DOC, DOCX, TXT, ODT, RTF, ODP, EPUB, ODS, XLS, XLSX, CSV, PPTX, HTML
   </Overview>
   <Registry>https://registry.hub.docker.com/r/onlyoffice/documentserver</Registry>
   <GitHub>https://github.com/</GitHub>
