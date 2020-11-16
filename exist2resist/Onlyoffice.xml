@@ -24,7 +24,7 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>bridge</Network>
-  <WebUI>https://[IP]:[PORT:90]</WebUI>
+  <WebUI>http://[IP]:[PORT:90]</WebUI>
   <Icon>https://i.imgur.com/k5n9siY.png</Icon>
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="Data Dir" Target="/var/www/onlyoffice/Data" Default="/mnt/user/appdata/onlyoffice/data" Mode="rw" Description="Data path" Display="always" Required="true"></Config>
