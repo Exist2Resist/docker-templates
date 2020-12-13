@@ -9,15 +9,15 @@
     rename them. It can also be configured to automatically upgrade the quality
     of files already downloaded when a better quality format becomes available.
   </Overview>
-  <Registry>https://hub.docker.com/exist2resist/sonarr</Registry>
+  <Registry>https://hub.docker.com/r/exist2resist/sonarr</Registry>
   <GitHub>https://github.com/</GitHub>
-  <Repository></Repository>
+  <Repository>exist2resist/sonarr</Repository>
   <Support></Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>bridge</Network>
   <WebUI>https://[IP]:[PORT]</WebUI>
-  <Icon>http://i.imgur.com/CIXYh6A.png</Icon>
+  <Icon>https://i.imgur.com/h8cV1FQ.png</Icon>
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="Dir 1" Target="/config" Default="/mnt/user/appdata/sonarr" Mode="rw" Description="Config Folder" Display="always" Required="true"></Config>
   <Config Type="Path" Name="Dir 2" Target="/mnt" Default="/mnt" Mode="rw" Description="Media Folder" Display="always" Required="true"></Config>
