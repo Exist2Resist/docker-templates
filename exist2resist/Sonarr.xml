@@ -16,7 +16,7 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>bridge</Network>
-  <WebUI>https://[IP]:[PORT:8989]</WebUI>
+  <WebUI>http://[IP]:[PORT:8989]</WebUI>
   <Icon>https://i.imgur.com/h8cV1FQ.png</Icon>
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="Dir 1" Target="/config" Default="/mnt/user/appdata/sonarr" Mode="rw" Description="Config Folder" Display="always" Required="true"></Config>
