@@ -1,0 +1,30 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>Readarr</Name>
+  <Beta></Beta>
+  <Category>Downloaders, MediaApp:Ebooks</Category>
+  <Overview>
+    Readarr is a ebook (and maybe eventually magazine/audiobook) 
+    collection manager for Usenet and BitTorrent users. 
+    It can monitor multiple RSS feeds for new books from your favorite authors 
+    and will grab, sort and rename them.
+  </Overview>
+  <Registry>https://hub.docker.com/r/hotio/readarr</Registry>
+  <GitHub>https://github.com/tingtom/Readarr</GitHub>
+  <Repository>hotio/readarr:nightly</Repository>
+  <Support></Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <WebUI>http://[IP]:[PORT:8787]</WebUI>
+  <Icon>https://i.imgur.com/xeByFYu.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Config Type="Path" Name="Dir 1" Target="/config" Default="/mnt/user/appdata/readarr" Mode="rw" Description="Config Folder" Display="always" Required="true"></Config>
+  <Config Type="Path" Name="Dir 2" Target="/mnt" Default="/mnt" Mode="rw" Description="Media Folder" Display="always" Required="true"></Config>
+  <Config Type="Port" Name="http" Target="8787" Default="8787" Mode="tcp" Description="TCP port 8787" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="User ID" Target="PUID" Default="99" Description="User ID the container will be run with." Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="Group ID" Target="PGID" Default="100" Description="Group ID the container will be run with." Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="Time Zone" Target="TZ" Default="America/Edmonton" Description="Time Zone container will be run with." Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="Debug" Target="DEBUG" Default="no" Description="Debug" Required="false"></Config>
+</Container>
