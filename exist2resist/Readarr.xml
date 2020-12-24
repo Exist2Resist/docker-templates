@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>Readarr</Name>
   <Beta></Beta>
-  <Category>Downloaders, MediaApp:Ebooks</Category>
+  <Category></Category>
   <Overview>
     Readarr is a ebook (and maybe eventually magazine/audiobook) 
     collection manager for Usenet and BitTorrent users. 
