@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>Subsonic</Name>
   <Beta>false</Beta>
-  <Category>MediaServer:Video, MediaServer:Music</Category>
+  <Category>MediaServer:Music</Category>
   <Overview>
   </Overview>
   <Registry>https://hub.docker.com/r/exist2resist/subsonic</Registry>
