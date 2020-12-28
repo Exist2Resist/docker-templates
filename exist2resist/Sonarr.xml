@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>Sonarr</Name>
   <Beta></Beta>
-  <Category>Downloaders</Category>
+  <Category>Downloaders:TV</Category>
   <Overview>
     Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple
     RSS feeds for new episodes of your favorite shows and will grab, sort and
