@@ -28,7 +28,7 @@
   <Network>br0</Network>
   <WebUI>http://[IP]:[PORT:80]/admin</WebUI>
   <Icon>https://i.imgur.com/jwVrmka.png</Icon>
-  <ExtraParams>--cap-add=NET_ADMIN</ExtraParams>
+  <ExtraParams>--cap-add=NET_ADMIN --dns=1.1.1.1</ExtraParams>
   <Config Name="Host Port 1" Target="53" Default="53" Mode="tcp" Description="DNS tcp Container Port: 53" Type="Port" Display="always" Required="true" Mask="false">53</Config>
   <Config Name="Host Port 2" Target="53" Default="53" Mode="udp" Description="DNS udp Container Port: 53" Type="Port" Display="always" Required="true" Mask="false">53</Config>
   <Config Name="Host Port 3" Target="80" Default="80" Mode="tcp" Description="HTTP Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">80</Config>
@@ -41,7 +41,6 @@
   <Config Type="Variable" Name="Use IPv6" Target="IPv6" Default="False" Description="Strips out IPv6 config for unraid" Display="always" Required="true">False</Config>	
   <Config Type="Variable" Name="Time Zone" Target="TZ" Default="America/Edmonton" Description="Set the timezone of PiHole" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="Admin Password" Target="WEBPASSWORD" Default="P@s0!5!1" Description="Admin password of web console" Display="always" Required="true"></Config>	
-  <Config Type="Variable" Name="DNS server 2" Target="DNS2" Default="1.1.1.1" Description="DNS sever" Display="always" Required="false"></Config>		
-  <Config Type="Variable" Name="DNS server 3" Target="DNS3" Default="8.8.8.8" Description="DNS sever 2" Display="always" Required="false"></Config>		
-  <Config Type="Variable" Name="DNS server 4" Target="DNS4" Default="208.67.222.222" Description="DNS sever 3" Display="always" Required="false"></Config>		
+  <Config Type="Variable" Name="DNS server 2" Target="DNS2" Default="1.0.0.1" Description="DNS sever" Display="always" Required="false"></Config>		
+  <Config Type="Variable" Name="DNS server 3" Target="DNS3" Default="208.67.222.222" Description="DNS sever 3" Display="always" Required="false"></Config>		
 </Container>
