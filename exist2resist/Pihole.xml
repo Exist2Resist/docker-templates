@@ -41,7 +41,6 @@
   <Config Type="Variable" Name="Use IPv6" Target="IPv6" Default="False" Description="Strips out IPv6 config for unraid" Display="always" Required="true">False</Config>	
   <Config Type="Variable" Name="Time Zone" Target="TZ" Default="America/Edmonton" Description="Set the timezone of PiHole" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="Admin Password" Target="WEBPASSWORD" Default="P@s0!5!1" Description="Admin password of web console" Display="always" Required="true"></Config>	
-  <Config Type="Variable" Name="DNS server 1" Target="DNS1" Default="127.0.0.1" Description="Mandatory DNS server" Display="advanced" Required="true"></Config>	
   <Config Type="Variable" Name="DNS server 2" Target="DNS2" Default="1.1.1.1" Description="DNS sever" Display="always" Required="false"></Config>		
   <Config Type="Variable" Name="DNS server 3" Target="DNS3" Default="8.8.8.8" Description="DNS sever 2" Display="always" Required="false"></Config>		
   <Config Type="Variable" Name="DNS server 4" Target="DNS4" Default="208.67.222.222" Description="DNS sever 3" Display="always" Required="false"></Config>		
