@@ -12,7 +12,7 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>bridge</Network>
-  <WebUI>https://[IP]:[PORT]</WebUI>
+  <WebUI></WebUI>
   <Icon>https://i.imgur.com/tm53hpx.png</Icon>
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="" Target="/data" Default="/mnt/user/redis" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
