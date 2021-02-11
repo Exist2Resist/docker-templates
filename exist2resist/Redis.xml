@@ -13,7 +13,7 @@
   <Privileged>false</Privileged>
   <Network>bridge</Network>
   <WebUI>https://[IP]:[PORT]</WebUI>
-  <Icon>https://i.imgur.com/RySytCQ.png</Icon>
+  <Icon>https://i.imgur.com/tm53hpx.png</Icon>
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="" Target="/data" Default="/mnt/user/redis" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
   <Config Type="Port" Name="" Target="6379" Default="6379" Mode="tcp" Description="TCP port 6379" Display="always" Required="true"></Config>
