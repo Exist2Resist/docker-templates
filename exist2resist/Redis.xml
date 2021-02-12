@@ -17,7 +17,7 @@
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="" Target="/data" Default="/mnt/user/redis" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
   <Config Type="Port" Name="" Target="6379" Default="6379" Mode="tcp" Description="TCP port 6379" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="Enable JWT" Target="JWT_ENABLED" Default="false" Description="Enable JSON Web Token " Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="JWT Secret" Target="JWT_SECRET" Default="secret" Description="JSON Web Token Secret" Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="JWT Header" Target="JWT_HEADER" Default="Authorization" Description="JSON Web Token Header" Display="always" Required="false"></Config>
 </Container>
-JWT_ENABLED=${JWT_ENABLED:-false}
-JWT_SECRET=${JWT_SECRET:-secret}
-JWT_HEADER=${JWT_HEADER:-Authorization}
