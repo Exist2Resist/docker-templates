@@ -18,3 +18,6 @@
   <Config Type="Path" Name="" Target="/data" Default="/mnt/user/redis" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
   <Config Type="Port" Name="" Target="6379" Default="6379" Mode="tcp" Description="TCP port 6379" Display="always" Required="true"></Config>
 </Container>
+JWT_ENABLED=${JWT_ENABLED:-false}
+JWT_SECRET=${JWT_SECRET:-secret}
+JWT_HEADER=${JWT_HEADER:-Authorization}
