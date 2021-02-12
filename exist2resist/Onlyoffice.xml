@@ -34,7 +34,6 @@
   <Config Type="Port" Name="HTTP port" Target="80" Default="90" Mode="tcp" Description="Target TCP http port 80" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="Enable JWT" Target="JWT_ENABLED" Default="false" Description="Enable JSON Web Token " Display="always" Required="true"></Config>
   <Config Type="Variable" Name="JWT Secret" Target="JWT_SECRET" Default="secret" Description="JSON Web Token Secret" Display="always" Required="false"></Config>
-  <Config Type="Variable" Name="JWT Header" Target="JWT_HEADER" Default="Authorization" Description="JSON Web Token Header" Display="always" Required="false"></Config>
   <Config Type="Variable" Name="User ID" Target="PUID" Default="99" Description="User ID the container will be run with." Display="always" Required="false"></Config>
   <Config Type="Variable" Name="Group ID" Target="PGID" Default="100" Description="Group ID the container will be run with." Display="always" Required="false"></Config>
 </Container>
