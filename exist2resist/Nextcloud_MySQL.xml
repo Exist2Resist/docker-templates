@@ -35,10 +35,10 @@
   <Icon>https://i.imgur.com/JtZboVW.png</Icon>
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="Main Folder" Target="/var/www/html" Default="/mnt/user/appdata/nextcloud/nextcloud/" Mode="rw" Description="Host path to store user data files for persistance between upgrades." Display="always" Required="true"></Config>  
-  <Config Type="Path" Name="Config Folder" Target="/var/www/html" Default="/mnt/user/appdata/nextcloud/config/" Mode="rw" Description="Host path to store user data files for persistance between upgrades." Display="always" Required="true"></Config>  
-  <Config Type="Path" Name="Apps Folder" Target="/var/www/html" Default="/mnt/user/appdata/nextcloud/custom_apps/" Mode="rw" Description="Host path to store user data files for persistance between upgrades." Display="always" Required="true"></Config>  
-  <Config Type="Path" Name="Themes Folder" Target="/var/www/html" Default="/mnt/user/appdata/nextcloud/themes/" Mode="rw" Description="Host path to store user data files for persistance between upgrades." Display="always" Required="true"></Config>  	
   <Config Type="Path" Name="Data Folder" Target="/var/www/html/data" Default="/mnt/user/Nextcloud/" Mode="rw" Description="Host path to store user data for persistance." Display="always" Required="true"></Config>
+  <Config Type="Path" Name="Config Folder" Target="/var/www/html" Default="/mnt/user/appdata/nextcloud/config/" Mode="rw" Description="Host path to store configuration files for persistance between upgrades." Display="always" Required="true"></Config>  
+  <Config Type="Path" Name="Apps Folder" Target="/var/www/html" Default="/mnt/user/appdata/nextcloud/custom_apps/" Mode="rw" Description="Host path to store custom app files for persistance between upgrades." Display="advanced" Required="false"></Config>  
+  <Config Type="Path" Name="Themes Folder" Target="/var/www/html" Default="/mnt/user/appdata/nextcloud/themes/" Mode="rw" Description="Host path to store custom themes files for persistance between upgrades." Display="advanced" Required="false"></Config>  	
   <Config Type="Port" Name="TCP Port" Target="80" Default="8080" Mode="tcp" Description="HTTP port" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="SQL Databse for Nextcloud" Target="MYSQL_DATABASE" Default="nextcloud" Description="MySQL database name." Display="always" Required="true"></Config>
   <Config Type="Variable" Name="SQL User ID" Target="MYSQL_USER" Default="ncuser" Description="Optional DB User ID" Display="always" Required="true"></Config>
