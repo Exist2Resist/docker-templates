@@ -37,9 +37,9 @@
   <Config Type="Path" Name="Main Folder" Target="/var/www/html" Default="/mnt/user/appdata/nextcloud" Mode="rw" Description="Host path to store user data files for persistance between upgrades." Display="always" Required="true"></Config>  
   <Config Type="Path" Name="Data directory" Target="/var/www/html/data" Default="/mnt/user/Nextcloud/" Mode="rw" Description="Host path to store user data for persistance." Display="always" Required="true"></Config>
   <Config Type="Port" Name="TCP Port" Target="443" Default="443" Mode="tcp" Description="HTTPS port" Display="always" Required="true"></Config>
-  <Config Type="Variable" Name="SQL Databse for Nextcloud" Target="MYSQL_DATABASE" Default="nextcloud" Description="MySQL database name:" Display="always" Required="true"></Config>
-  <Config Type="Variable" Name="SQL NC User ID" Target="MYSQL_USER" Default="ncuser" Description="Optional DB User ID" Display="always" Required="true"></Config>
-  <Config Type="Variable" Name="SQL NC User Password" Target="MYSQL_PASSWORD" Default="MyP@ssw0rd!" Description="DB User Password, needs write permissions" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="SQL Databse for Nextcloud" Target="MYSQL_DATABASE" Default="nextcloud" Description="MySQL database name." Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="SQL User ID" Target="MYSQL_USER" Default="ncuser" Description="Optional DB User ID" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="SQL User Password" Target="MYSQL_PASSWORD" Default="MyP@ssw0rd!" Description="DB User Password, needs write permissions" Mask="true" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="SQL Host IP" Target="MYSQL_HOST" Default="192.168.0.151:3306" Description="Database host IP:PORT" Display="always" Required="true"></Config>
   <Config Type="Variable" Name="Run with user ID" Target="APP_UID" Default="99" Description="Run application with specified user id." Mask="false" Display="advanced" Required="true">99</Config>
   <Config Type="Variable" Name="Run with group ID" Target="APP_GID" Default="100" Description="Run application with specified group id." Mask="false" Display="advanced" Required="true">100</Config>
