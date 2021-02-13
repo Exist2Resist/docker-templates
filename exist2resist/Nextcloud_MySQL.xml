@@ -31,7 +31,7 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>bridge</Network>
-  <WebUI>https://[IP]:[port]</WebUI>
+  <WebUI>https://[IP]:[PORT:8080]</WebUI>
   <Icon>https://i.imgur.com/JtZboVW.png</Icon>
   <ExtraParams></ExtraParams>
   <Config Type="Path" Name="Main Folder" Target="/var/www/html" Default="/mnt/user/appdata/nextcloud/nextcloud/" Mode="rw" Description="Host path to store user data files for persistance between upgrades." Display="always" Required="true"></Config>  
