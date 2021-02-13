@@ -20,7 +20,7 @@
 	[/span]
 	Run Example:[br]
 	docker run --restart=always --net=bridge --name Nextcloud -p 443:443 -v /mnt/user/appdata/nextcloud/:/var/www/html/config \[br]
-	-d nextcloud:16 \[br]
+	-d nextcloud:20 \[br]
 	[br][br]
 	optional:[br]
   </Overview>
