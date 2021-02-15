@@ -6,7 +6,7 @@
   <Overview>
   </Overview>
   <Registry>https://hub.docker.com/redis</Registry>
-  <GitHub>https://github.com/</GitHub>
+  <GitHub>https://github.com/docker-library/redis</GitHub>
   <Repository>redis</Repository>
   <Support>https://github.com/docker-library/redis/issues</Support>
   <BindTime>true</BindTime>
