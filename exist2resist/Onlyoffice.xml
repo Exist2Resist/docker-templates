@@ -18,9 +18,9 @@
     
   </Overview>
   <Registry>https://registry.hub.docker.com/r/onlyoffice/documentserver</Registry>
-  <GitHub>https://github.com/</GitHub>
+  <GitHub>https://github.com/ONLYOFFICE/DocumentServer</GitHub>
   <Repository>onlyoffice/documentserver</Repository>
-  <Support></Support>
+  <Support>https://github.com/ONLYOFFICE/DocumentServer/issues</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>bridge</Network>
