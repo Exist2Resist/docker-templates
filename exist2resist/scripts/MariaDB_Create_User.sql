@@ -1,3 +1,6 @@
-CREATE USER admin IDENTIFIED BY 'somesecret';
-GRANT USAGE ON *.* TO nextcloud@'%' IDENTIFIED BY 'somesecret';
-GRANT ALL PRIVILEGES ON nextcloud.* TO admin19@'%' identified BY 'somesecret';
+SET @user = 'admin';
+SET @secret = 'somesecret';
+SET @database = 'nextcloud'
+CREATE USER @user IDENTIFIED BY @secret;
+GRANT USAGE ON *.* TO @database@'%' IDENTIFIED BY @secret;
+GRANT ALL PRIVILEGES ON @database.* TO @user@'%' identified BY @secret;
