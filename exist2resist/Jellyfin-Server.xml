@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>Jellyfin-Server</Name>
+  <Beta></Beta>
+  <Category>MediaApp:Video</Category>
+  <Overview>
+  You can add as many mount points as needed for recordings, movies ,etc. [br][br]
+  [b][span style='color: #E80000;']Directions:[/span][/b][br]
+  [b]/config[/b] : This is where Jellyfin will store it's databases and configuration.[br][br]
+  [b]Port[/b] : This is the default port for Jellyfin. (Will add ssl port later)[br][br]
+  [b]Media[/b] : This is the mounting point of your media. When you access it in Jellyfin it will be /media or whatever you chose for a mount point[br][br]
+  [b]Cache[/b] : This is where Jellyfin will store and manage cached files like images to serve to clients. This is not where all images are stored.[br][br]
+  [b]Tip:[/b] You can add more volume mappings if you wish Jellyfin has access to it.
+  </Overview>
+  <Registry>https://hub.docker.com/r/jellyfin/jellyfin</Registry>
+  <GitHub>https://github.com/jellyfin/jellyfin/</GitHub>
+  <Repository>jellyfin/jellyfin</Repository>
+  <Support>https://www.reddit.com/r/jellyfin/</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <WebUI>https://[IP]:[PORT:8099]</WebUI>
+  <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/jellyfin-icon.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Config Type="Path" Name="Media Dir" Target="/media" Default="/mnt" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
+  <Config Type="Path" Name="Config Dir" Target="/config" Default="/mnt/user/appdata/Jellyfin-Server" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
+  <Config Type="Path" Name="Cache Dir" Target="/cache" Default="/mnt/user/appdata/Jellyfin-Server" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
+  <Config Type="Port" Name="Port" Target="8096" Default="8099" Mode="tcp" Description="TCP port 80" Display="always" Required="true"></Config>
+  <Config Type="Variable" Name="User ID" Target="PUID" Default="99" Description="User ID the container will be run with." Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="Group ID" Target="PGID" Default="100" Description="Group ID the container will be run with." Display="always" Required="false"></Config>
+</Container>
