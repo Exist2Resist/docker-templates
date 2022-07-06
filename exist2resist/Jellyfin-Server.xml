@@ -20,7 +20,7 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Network>bridge</Network>
-  <WebUI>https://[IP]:[PORT:8099]</WebUI>
+  <WebUI>http://[IP]:[PORT:8099]</WebUI>
   <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/jellyfin-icon.png</Icon>
   <ExtraParams>--user 99:100</ExtraParams>
   <Config Type="Path" Name="Media Dir" Target="/media" Default="/mnt" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
