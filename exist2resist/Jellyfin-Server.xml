@@ -22,11 +22,11 @@
   <Network>bridge</Network>
   <WebUI>https://[IP]:[PORT:8099]</WebUI>
   <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/jellyfin-icon.png</Icon>
-  <ExtraParams></ExtraParams>
+  <ExtraParams>--user 99:100</ExtraParams>
   <Config Type="Path" Name="Media Dir" Target="/media" Default="/mnt" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
   <Config Type="Path" Name="Config Dir" Target="/config" Default="/mnt/user/appdata/Jellyfin-Server" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
   <Config Type="Path" Name="Cache Dir" Target="/cache" Default="/mnt/user/appdata/Jellyfin-Server" Mode="rw" Description="Host path" Display="always" Required="true"></Config>
   <Config Type="Port" Name="Port" Target="8096" Default="8099" Mode="tcp" Description="TCP port 80" Display="always" Required="true"></Config>
-  <Config Type="Variable" Name="User ID" Target="PUID" Default="99" Description="User ID the container will be run with." Display="always" Required="false"></Config>
-  <Config Type="Variable" Name="Group ID" Target="PGID" Default="100" Description="Group ID the container will be run with." Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="User ID" Target="UID" Default="99" Description="User ID the container will be run with." Display="always" Required="false"></Config>
+  <Config Type="Variable" Name="Group ID" Target="GID" Default="100" Description="Group ID the container will be run with." Display="always" Required="false"></Config>
 </Container>
