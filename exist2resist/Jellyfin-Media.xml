@@ -28,7 +28,7 @@
     <Mode>host</Mode>
     <Publish>
       <Port>
-        <HostPort>8096</HostPort>
+        <HostPort>8099</HostPort>
         <ContainerPort>8096</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
